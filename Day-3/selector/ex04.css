@@ -1,0 +1,16 @@
+.form {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+}
+textarea{
+    margin-top: 10px;
+}
+td{
+    padding: 0 30px 10px 0;
+
+}
+.btn{
+    margin-top: 10px;
+}

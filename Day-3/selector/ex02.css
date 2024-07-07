@@ -1,0 +1,20 @@
+.display input {
+    width: 100%;
+    border: none;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+td {
+    border: 1px solid black;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    background-color: #60c8d6;
+    border: none;
+}
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <link rel="stylesheet" href="../Day-3/selector/ex01.css" />
+  </head>
+  <body>
+    <form class="form">
+      <h1>Try a free sample</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+        quas totam eos numquam corporis quidem porro eveniet veniam, dolorem
+        nemo in quos facere consequatur vero earum voluptas provident quis
+        dicta.
+      </p>
+      <table width="100%" border="0">
+        <tr>
+          <td>
+            <label for="firstname">First Name </label>
+          </td>
+          <td>
+            <label for="last-name">Last Name </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="firstname" placeholder="John" />
+          </td>
+          <td>
+            <input type="text" id="last-name" placeholder="Smith" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Email address </label>
+          </td>
+          <td>
+            <label for="">Address </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="email" placeholder="john@example.com" />
+          </td>
+          <td>
+            <input type="text" placeholder="Silk St" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">City </label>
+          </td>
+          <td>
+            <label for=""
+              >State <span class="optional">(optional)</span>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" placeholder="London" />
+          </td>
+          <td>
+            <input type="text" placeholder="" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">ZIP code </label>
+          </td>
+          <td>
+            <label for="country"> Country </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" placeholder="EC2Y8DS" />
+          </td>
+          <td>
+            <select name="country" id="country">
+              <option value="0" selected>United Kingdom</option>
+              <option value="1">HN</option>
+              <option value="2">BG</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><button class="btn">SEND ME FREE COFFEE</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
