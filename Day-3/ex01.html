@@ -27,49 +27,69 @@
         </tr>
         <tr>
           <td>
-            <input type="text" id="firstname" placeholder="John" />
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="John"
+            />
           </td>
           <td>
-            <input type="text" id="last-name" placeholder="Smith" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="">Email address </label>
-          </td>
-          <td>
-            <label for="">Address </label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="email" placeholder="john@example.com" />
-          </td>
-          <td>
-            <input type="text" placeholder="Silk St" />
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Smith"
+            />
           </td>
         </tr>
         <tr>
           <td>
-            <label for="">City </label>
+            <label for="email">Email address </label>
           </td>
           <td>
-            <label for=""
+            <label for="address">Address </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Silk St"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="city">City </label>
+          </td>
+          <td>
+            <label for="optional"
               >State <span class="optional">(optional)</span>
             </label>
           </td>
         </tr>
         <tr>
           <td>
-            <input type="text" placeholder="London" />
+            <input type="text" id="city" name="city" placeholder="London" />
           </td>
           <td>
-            <input type="text" placeholder="" />
+            <input type="text" />
           </td>
         </tr>
         <tr>
           <td>
-            <label for="">ZIP code </label>
+            <label for="ZIP">ZIP code </label>
           </td>
           <td>
             <label for="country"> Country </label>
@@ -77,13 +97,12 @@
         </tr>
         <tr>
           <td>
-            <input type="text" placeholder="EC2Y8DS" />
+            <input type="text" id="ZIP" name="ZIP" placeholder="EC2Y8DS" />
           </td>
           <td>
             <select name="country" id="country">
               <option value="0" selected>United Kingdom</option>
-              <option value="1">HN</option>
-              <option value="2">BG</option>
+              <option value="1">Viet Nam</option>
             </select>
           </td>
         </tr>
