@@ -1,8 +1,13 @@
-.form {
+.container{
+    padding: 5px;
     background-color: #ccc;
-    padding: 20px;
     border-radius: 5px;
     width: 600px;
+}
+.form {
+    background-color: #ccc;
+    border-radius: 5px;
+    width: 100%;
 }
 input, select{
     width: 90%;

@@ -1,8 +1,14 @@
-.form {
+.container{
     background-color: #ccc;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     width: 600px;
+}
+
+.form {
+    background-color: #ccc;
+    border-radius: 5px;
+    width: 100%;
 }
 textarea{
     margin-top: 10px;
