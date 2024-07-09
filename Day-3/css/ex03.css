@@ -4,4 +4,7 @@
 .btn{
     text-align: center;
 }
-
+th{
+    font-weight: initial;
+    text-align: left;
+}
