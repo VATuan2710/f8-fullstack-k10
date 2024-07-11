@@ -1,0 +1,10 @@
+li {
+    list-style-type: none;
+    margin: 10px 0;
+  }
+
+  li::before {
+    content: "😊";
+    display: inline-block;
+    margin-right: 5px;
+  }

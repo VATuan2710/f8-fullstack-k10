@@ -1,0 +1,48 @@
+.content {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+code{
+    background-color: #f0f0f0;
+    color: #333;
+}
+.ad-box {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ad-box p {
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+.ad-box a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.ad-box a:hover {
+    text-decoration: underline;
+}

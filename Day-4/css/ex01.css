@@ -1,0 +1,48 @@
+.subscribe-container {
+    width: 600px;
+    background-color: #384454;
+    padding-top: 5px;
+}
+
+.subscribe-container span {
+    color: #ff9900;
+    padding-left: 10px;
+}
+.subscribe-container h2 {
+    color: white;
+}
+
+.subscribe-container p {
+    color: white;
+    padding-left: 10px;
+}
+.subscribe-form{
+    padding: 0 0 10px 10px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffcc00;
+    color: #333333;
+}
+
+.subscribe-form:hover input {
+    background-color: #ddd;
+    color: #ffcc00;
+}
+
+.subscribe-form:hover input::placeholder {
+    color: #ff9900;
+}
+
+.subscribe-form:hover button {
+    background-color: #ff9900;
+    color: #ffffff;
+}

@@ -1,0 +1,28 @@
+.container {
+    max-width: 740px;
+    display: flex;
+}
+.icon-left,
+.icon-right {
+    background-color: #ccc;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    flex-shrink: 0;
+    text-align: center;
+}
+.content {
+    padding: 20px;
+}
+
+.icon-right {
+    align-self: flex-end;
+}
+
+.icon-left i{
+    padding-top: 15px;
+}
+.icon-right i{
+    padding-top: 15px;
+}
