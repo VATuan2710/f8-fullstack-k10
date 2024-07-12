@@ -1,9 +1,8 @@
 .subscribe-container {
-    width: 600px;
+    width: 800px;
     background-color: #384454;
     padding-top: 5px;
 }
-
 .subscribe-container span {
     color: #ff9900;
     padding-left: 10px;
@@ -33,16 +32,16 @@
     color: #333333;
 }
 
-.subscribe-form:hover input {
+.subscribe-container:hover input {
     background-color: #ddd;
     color: #ffcc00;
 }
 
-.subscribe-form:hover input::placeholder {
+.subscribe-container:hover input::placeholder {
     color: #ff9900;
 }
 
-.subscribe-form:hover button {
+.subscribe-container:hover button {
     background-color: #ff9900;
     color: #ffffff;
 }
