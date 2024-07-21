@@ -72,6 +72,9 @@ html {
     box-sizing: border-box;
     position: relative;
 }
+.input-wrapper i:nth-of-type(2){
+    display: none;
+}
 .input-wrapper input,
 .input-wrapper select{
     font-family: "Lato", sans-serif;
@@ -132,6 +135,12 @@ html {
 }
 .input-form:focus-within .icon {
     background-color: black;
+}
+.input-form:focus-within i:nth-of-type(2){
+    display: inline;
+}
+.input-wrapper:focus-within i:nth-of-type(1){
+    display: none;
 }
 .checkbox-container {
     width: 100%;
