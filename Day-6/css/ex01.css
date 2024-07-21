@@ -25,12 +25,10 @@ html {
     font-size: 3.2em;
     color: black;
 }
-
 .sub-title {
     color: #d7d0d0;
     margin-top: 20px;
 }
-
 .sub-title span {
     color: red;
 }
@@ -40,14 +38,13 @@ html {
     display: flex;
 }
 
-.form-field label {
+.form-field div:first-child {
     width: 100%;
 }
-.input-form {
+.input-form  {
     display: flex;
     border: 1px solid #dddddd;
     width: 100%;
-    position: relative;
 }
 .input-form:hover {
     border: 1px solid black;
@@ -55,7 +52,7 @@ html {
 }
 .icon {
     background-color: #dddddd;
-    width: 50px;
+    max-width: 10%;
     font-size: 1.6rem;
     display: flex;
     align-items: center;
@@ -77,6 +74,7 @@ html {
 }
 .input-wrapper input,
 .input-wrapper select{
+    font-family: "Lato", sans-serif;
     width: 100%;
     border: none;
     outline: none;
@@ -177,6 +175,7 @@ html {
 }
 
 .form-field button {
+    font-family: "Lato", sans-serif;
     padding: 10px 34px;
     border: none;
     background-color: #e93f32;
