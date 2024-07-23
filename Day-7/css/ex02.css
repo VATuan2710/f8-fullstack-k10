@@ -134,6 +134,16 @@ form h2 span {
 form h2 span::first-letter{
     text-decoration: underline;
 }
+form h2::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 16%;
+    height: 2px;
+    left: 44%;
+    background-color:  #ff574d;
+    margin-top: 10px;
+}
 
 .input-group {
     margin-bottom: 20px;

@@ -68,14 +68,16 @@ ul li:hover i {
     border-color:  transparent transparent wheat transparent;
 }
 .dropdown-content ul{
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(198, 13, 13, 0.1);
 }
 .dropdown-content li {
     display: block;
     width: 200px;
     border-bottom: 1px solid #eee;
 }
-
+.dropdown-content:hover ul li i{
+    display: inline-block;
+}
 .dropdown-content li a {
     display: block;
     padding: 10px;
