@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-a{
+a {
     text-decoration: none;
     color: #717171;
 }
@@ -14,12 +14,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg);
+    background-image: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg");
     background-repeat: no-repeat ;
     background-size: cover;
 }
-
-
 .container {
     display: flex;
     width: 700px;
@@ -28,7 +26,6 @@ body {
     position: relative;
     border-radius: 10px;
 }
-
 .left {
     background-color: #ff574d;
     color: white;
@@ -71,13 +68,11 @@ body {
 .arrow i{
     color: #ff574d;
 }
-
 .logo {
     display: block;
     align-items: center;
     margin-bottom: 20px;
 }
-
 .logo-icon {
     background-color: white;
     color: #ff574d;
@@ -87,17 +82,14 @@ body {
     border-radius: 5px;
     margin-right: 10px;
 }
-
 .logo-text {
     font-size: 24px;
     font-weight: bold;
 }
-
 .left p {
     margin-bottom: 20px;
     color: #ffffff;
 }
-
 .read-more {
     display: inline-block;
     padding: 10px 20px;
@@ -108,7 +100,6 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
 }
-
 .social-icons a {
     background-color: #7171713f;
     color: white;
@@ -123,7 +114,6 @@ form{
     justify-content: center;
     text-align: center;
 }
-
 form h2 {
     color: #272323;
     margin-bottom: 20px;
@@ -144,12 +134,11 @@ form h2::after{
     background-color:  #ff574d;
     margin-top: 10px;
 }
-
 .input-group {
     margin-bottom: 20px;
 }
-
 .input-group input {
+    font-family: "Nunito", sans-serif;
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -157,7 +146,6 @@ form h2::after{
     font-size: 16px;
     color: #717171;
 }
-
 .options {
     display: flex;
     justify-content: space-between;
@@ -165,8 +153,8 @@ form h2::after{
     margin-bottom: 20px;
     color: #717171;
 }
-
 button {
+    font-family: "Nunito", sans-serif;
     width: 100%;
     padding: 10px;
     background-color: #ff574d;
@@ -176,11 +164,9 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
-
 button:hover {
     background-color: #ff2e1a;
 }
-
 form p {
     color: #717171;
     margin-top: 20px;

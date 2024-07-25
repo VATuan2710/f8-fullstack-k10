@@ -1,0 +1,97 @@
+body {
+    font-family: 'Asap', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background-color: #eee;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tab.active {
+    background-color: #d4af37;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.item .info {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.item.quận2 {
+    background-image: url('https://fastly.picsum.photos/id/243/600/300.jpg?hmac=LLcyBBMyVCbNwHz4w_0bm_s2p8SERhr9iyzg0i_lpF0');
+}
+
+.item.quận7 {
+    background-image: url('quận7.jpg');
+}
+
+.item.quận9 {
+    background-image: url('quận9.jpg');
+}
+
+.item.quận-tân-bình {
+    background-image: url('quận-tân-bình.jpg');
+}
+
+.item.thành-phố-thủ-đức {
+    background-image: url('thành-phố-thủ-đức.jpg');
+}
+
+.item.huyện-bình-chánh {
+    background-image: url('huyện-bình-chánh.jpg');
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.info p {
+    margin: 5px 0 0;
+}

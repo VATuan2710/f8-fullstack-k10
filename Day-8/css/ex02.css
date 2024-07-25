@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-image: url("https://cafebiz.cafebizcdn.vn/thumb_w/600/162123310254002176/2023/7/10/photo1688960129379-1688960129449869689699-16889671231791364262111.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    font-family: "Asap", sans-serif;
+} 
+.content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 50px ;
+}
+.content img{
+    position: absolute;
+    bottom: 0;
+}
+
+.content .describe{
+    width: 100%;
+    position: absolute;
+    bottom: 35%;
+    left: 300px;
+    color: white
+}
+.content .sub-content{
+    width: 100%;
+    position: absolute;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.646)
+}
+.content .sub-content p{
+    display: inline-block;
+}
+.content .sub-content p + p{
+    display: inline-block;
+    margin-left: 30px;
+}
+.content .sub-content span{
+    color: white;
+    font-size: 1.3rem;
+}
+.nav-bar{
+    float: right;
+    margin-right: 50px;
+}
+.nav-bar ul li{
+    display: inline-block;
+}
+.nav-bar ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+} 
+/* .nav-bar ul li a:first-child:after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color:  #ff574d;
+    margin-top: 10px;
+
+} */
+.nav-bar ul li .underline:hover{
+    color: #ff574d ;
+}
+.nav-bar ul li .underline:hover::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    background-color:  #ff574d;
+    margin-top: 10px;
+}

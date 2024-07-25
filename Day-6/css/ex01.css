@@ -165,7 +165,7 @@ html {
     padding: 11px;
     display: inline-block;
     position: relative;
-    vertical-align: middle;
+    vertical-align: middle; 
     cursor: pointer;
     margin-right: 5px;
 }
