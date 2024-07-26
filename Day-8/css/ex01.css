@@ -24,16 +24,18 @@ body{
     padding: 15px;
 }
 .content .banner h2{
-    color: #ff564dc0 ;
+    color:   #bf4240 ;
     margin-top: 5px;
 }
 .content .banner p{
     margin-top: 5px;
+    color: #3f3424;
 }
 .content .banner address{
     margin-top: 5px;
-    font-weight: 450;
-}
+    font-weight: 400;
+    color: #3f3424;
+}   
 .content .price{
     width: 180px;
     height:60px;
