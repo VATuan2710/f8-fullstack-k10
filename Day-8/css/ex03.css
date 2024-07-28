@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Asap', sans-serif;
     background-color: #f5f5f5;
@@ -10,14 +16,31 @@ body {
     width: 90%;
     margin: auto;
 }
+.container .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .container h2{
     font-size: 1rem;
-    margin-left: 5px;
+    margin: 15px 0 15px 5px;
+    font-weight: 600;
+    margin-right: 10px;
 }
+.line {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+  }
 .tabs {
+    font-family: 'Asap', sans-serif;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
+}
+.tabs ul li {
+    display: inline-block;
+    text-decoration: none;
 }
 .tab {
     background-color: #eee;
@@ -34,15 +57,16 @@ body {
     min-width: 100px;
     font-size: 0.8rem;
 }
-.tab:first-child {
+.tab:hover {
     background-color: #d4af37;
     color: #fff;
 }
 .tab span {
     display: block;
-    font-size: 0.55rem;
+    font-size: 0.5rem;
     font-style: italic;
     font-weight: 550;
+    padding-top: 3px;
 }
 .content {
     display: flex;
@@ -57,49 +81,55 @@ body {
     height: 200px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
+    cursor: pointer;
 }
-.item h3{
+.item:hover {
+    background: red;
+}
+
+.item h3 {
     color: white;
-    width: 100%;
+    width: 100%; 
     height: 50%;
     position: relative;
-    top: 5%;
+    top: 10%;
     left: 10%;
+    font-weight: 550;
 }
-.item span{
+.item span {
     width: 100%;
     height: 50%;
     position: relative;
-    bottom: -10%;
+    bottom: -30%;
     left: 10%;
     color: white;
     font-size: 0.8rem;
     float: left;
 }
-.item span b{
+.item span b {
     color: rgba(255, 255, 255, 0.658);
     font-weight: 450;
 }
-.item.quận2 {
+.item:nth-child(1) {
     background-image: url('https://fastly.picsum.photos/id/243/600/300.jpg?hmac=LLcyBBMyVCbNwHz4w_0bm_s2p8SERhr9iyzg0i_lpF0');
 }
 
-.item.quận7 {
+.item:nth-child(2) {
+    background-image: url('https://fastly.picsum.photos/id/975/600/300.jpg?hmac=Twjbgkjcr2q2g0ibIVjrp0ISN3PHlPz8Y4gBs7AM_pk');
+}
+
+.item:nth-child(3) {
     background-image: url('https://fastly.picsum.photos/id/243/600/300.jpg?hmac=LLcyBBMyVCbNwHz4w_0bm_s2p8SERhr9iyzg0i_lpF0');
 }
 
-.item.quận9 {
+.item:nth-child(4) {
     background-image: url('https://fastly.picsum.photos/id/243/600/300.jpg?hmac=LLcyBBMyVCbNwHz4w_0bm_s2p8SERhr9iyzg0i_lpF0');
 }
 
-.item.quận-tân-bình {
+.item:nth-child(5) {
     background-image: url('https://fastly.picsum.photos/id/243/600/300.jpg?hmac=LLcyBBMyVCbNwHz4w_0bm_s2p8SERhr9iyzg0i_lpF0');
 }
 
-.item.thành-phố-thủ-đức {
-    background-image: url('https://fastly.picsum.photos/id/243/600/300.jpg?hmac=LLcyBBMyVCbNwHz4w_0bm_s2p8SERhr9iyzg0i_lpF0');
-}
-
-.item.huyện-bình-chánh {
+.item:nth-child(6) {
     background-image: url('https://fastly.picsum.photos/id/243/600/300.jpg?hmac=LLcyBBMyVCbNwHz4w_0bm_s2p8SERhr9iyzg0i_lpF0');
 }
