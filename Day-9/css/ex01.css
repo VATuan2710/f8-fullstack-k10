@@ -46,9 +46,9 @@ body {
 }
 
 .content .content-body .tag {
+    font-family: "Inter" , sans-serif;
     display: inline-block;
     margin-top: 18px;
-    font-family: "Inter" , sans-serif;
     font-weight: 700;
     padding: 4px 10px;
     border-radius: 99px;
@@ -59,13 +59,10 @@ body {
     line-height: 2.4;
     height: 10px;
     width: 10px;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(0deg, rgba(131, 58, 180, 1) 0%, rgba(66, 132, 121, 1) 0%, rgba(101, 195, 180, 1) 100%);
+    background: rgb(55, 142, 118);
     border-radius: 50%;
     margin: 12px 24px;
-    box-shadow: 0px 0px 0px 8px rgba(237, 246, 244, 1);
-    -webkit-box-shadow: 0px 0px 0px 8px rgba(237, 246, 244, 1);
-    -moz-box-shadow: 0px 0px 0px 8px rgba(237, 246, 244, 1);
+    box-shadow: 0px 0px 0px 8px rgba(65, 135, 120, 0.162);
     position: relative;
 }
 
