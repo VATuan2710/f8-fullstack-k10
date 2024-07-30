@@ -4,26 +4,24 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
+
 }
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
-    font-family: "Inter" , sans-serif;
 }
 
 body {
-    min-height: 100dvh;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto;
+    font-family: "Inter" , sans-serif;
 }
 
 .container {
+    width: 80%;
     margin-top: 24px;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-around;
 }
 
 .time-line {
@@ -116,9 +114,9 @@ body {
     position: relative;
     height: 350px;
     width: 300px;
-    left: -40%;
+    left: 50%;
     background: url("https://fastly.picsum.photos/id/912/800/800.jpg?hmac=b4vsGu44_E8s9aABvkRZLIjZP81WYwWLynWFja51QPs") no-repeat center center/cover;
-}
+} 
 
 .front-img {
     position: absolute;
