@@ -55,6 +55,7 @@ body {
     position: absolute;
     bottom: 120px;
     color: black;
+    transition: transform 0.4s ease;
     z-index: 3;
 }
 .content h2 a {
@@ -186,6 +187,7 @@ body {
    to {
     bottom: 180px;
     color: white;
+    padding-right: 20px;
    }
 }
   
@@ -193,6 +195,7 @@ body {
    from {
     bottom: 180px;
     color: white;
+    padding-right: 20px;
    }
    to {
     bottom: 120x;
