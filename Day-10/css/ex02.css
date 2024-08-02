@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.178);
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.head {
+    background-color: white;
+}
+
+.head ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.head ul li {
+    padding: 10px 21px;
+    border: 1px solid rgba(128, 128, 128, 0.178);
+}
+
+.head ul li label {
+    display: block;
+    padding: 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.head ul li label:hover {
+    background-color: #30a8f6;
+    color: white;
+}
+
+.container input[id="simple"]:checked ~ .head label[for="simple"],
+.container input[id="algoritmo"]:checked ~ .head label[for="algoritmo"],
+.container input[id="barra"]:checked ~ .head label[for="barra"],
+.container input[id="capcha"]:checked ~ .head label[for="capcha"] {
+    background-color: #30a8f6;
+    color: white;
+}
+
+.body {
+    position: relative;
+    height: 600px; 
+    perspective: 1000px; 
+}
+
+.content {
+    background-color: white;
+    width: 900px;
+    padding: 20px;
+    position: absolute;
+    overflow-x: scroll;
+    transform-origin: top;
+    transform: rotateX(-50deg); 
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+.container input[id="simple"]:checked ~ .body .content:nth-child(1),
+.container input[id="algoritmo"]:checked ~ .body .content:nth-child(2),
+.container input[id="barra"]:checked ~ .body .content:nth-child(3),
+.container input[id="capcha"]:checked ~ .body .content:nth-child(4) {
+    opacity: 1;
+    transform: rotateX(0);
+}
+
+.content h2 {
+    font-size: 3.6rem;
+    color: rgba(0, 0, 0, 0.701);
+}
+
+.content .describe {
+    margin-top: -5px;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    width: 930px;
+}

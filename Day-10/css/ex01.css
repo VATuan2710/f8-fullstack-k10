@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    margin: 50px auto;
+    width: 900px;
+    height: 500px;
+    background-color: #30a8f6;
+    border: 1px solid red;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-button .fa-bars {
+    font-size: 2.8rem; 
+    color: #30a8f6;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+}
+
+ul li {
+    list-style: none;
+    font-size: 2.4rem;
+    position: relative;
+}
+
+.circle-button .background {
+    top: 0;
+    left: 0;
+    width: 80px; 
+    height: 80px;
+    background-color: white; 
+    border-bottom-right-radius: 100%;
+    position: absolute;
+    transition: 0.4s ease-out; 
+    z-index: 2;  
+}
+
+.circle-button input[id="checkbox"]:checked ~ .background {
+    width: 1800px;
+    height: 1000px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: block;
+    border-bottom-right-radius: 0;
+    transition: 0.4s ease;
+}
+
+.circle-button .navbar {
+    display: none;
+    position: absolute;
+    width: 900px;
+    height: 500px;
+    color: #30a8f6;
+    inset: 0;
+    position: absolute;
+    z-index: 5;
+    transition: all 1s ease;
+}
+
+.circle-button .navbar .fa-arrow-left {
+    margin: 20px 0 0 20px;
+    font-size: 3.6rem;
+    cursor: pointer;
+}
+
+/* .circle-button input:checked ~ .circle-button .navbar .check-box .fa-arrow-left {
+    font-size: 5rem;
+} */
+
+.circle-button nav li + li {
+    margin-top: 20px ;
+    font-size: 2rem;
+    font-weight: 550;
+}
+.circle-button nav li + li label {
+    padding:5px 90px 5px 40px;
+    color: #30a8f6;
+}
+
+.circle-button nav li + li a {
+    text-decoration: none;
+}
+
+.circle-button input[id="checkbox"]:checked ~ .navbar {
+    display: block;
+}
+
+.circle-button input[id="home"]:checked ~  .navbar label[for="home"] ,
+.circle-button input[id="about"]:checked ~ .navbar label[for="about"],
+.circle-button input[id="portfolio"]:checked ~ .navbar label[for="portfolio"],
+.circle-button input[id="contact"]:checked ~ .navbar label[for="contact"] {
+    background-color: rgba(128, 128, 128, 0.326);
+    color: rgba(0, 0, 0, 0.379);
+}
+ 
+
+.content {
+    margin-top: 120px;
+    color: white;
+    position: relative;
+}
+
+.content h2 {
+    font-size: 4.2rem; 
+    font-weight: bold;
+    position: absolute;
+    right: 90px; 
+}
+
+.content p {
+    font-size: 2.8rem; 
+    position: absolute;
+    bottom: -100px;
+    right: 90px; 
+    font-size: 3em;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.765);
+}
+
+.content span {
+    font-size: 1.6rem ;
+    padding-right: 2px;
+}
