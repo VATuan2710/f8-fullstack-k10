@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
 }
 
 html {
@@ -81,10 +82,11 @@ header {
     font-size: 1.8rem;
     border-radius: 99px;
     border: 2px solid var(--orange) ;
-    padding: 5px;
+    padding: 5px ;
     color: var(--orange);
     cursor: pointer;
     margin-left: 10%;
+    line-height: 1;
 }
 
 input[id="change-status"]:checked ~ .night {
@@ -119,7 +121,7 @@ input[id="change-status"]:checked ~ .night {
 }
 
 .home {
-    background-image: url("https://stravelhtml.vercel.app/mumbai/images/home-bg.jpg") ;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://stravelhtml.vercel.app/mumbai/images/home-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -260,7 +262,7 @@ input[id="change-status"]:checked ~ .night {
 
 .box-container {
     display: block;
-    width: 82%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -269,6 +271,8 @@ input[id="change-status"]:checked ~ .night {
     border-radius: 10px ;
     overflow: hidden;
     background-color: #222;
+    height: 100%;
+    /* max-height: 300px; */
 }
 
 #change-status:checked ~ .night .destination .box-container .item {
@@ -495,8 +499,6 @@ input[id="change-status"]:checked ~ .night {
     margin: 30px;
 }
 
-
-
 .blogs .blogs-heading span {
     font-size: 2rem;
     color: var(--orange);
@@ -550,10 +552,11 @@ input[id="change-status"]:checked ~ .night {
 
 .banner {
     width: 100%;
-    background-image: url("https://stravelhtml.vercel.app/mumbai/images/banner-bg.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://stravelhtml.vercel.app/mumbai/images/banner-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 30px 20px;
 }
 
@@ -721,5 +724,5 @@ input[id="change-status"]:checked ~ .night {
         margin: 2rem;
     }
 
-    
+
 }
