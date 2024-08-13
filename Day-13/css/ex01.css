@@ -30,9 +30,6 @@ a {
 
 header {
     background-color: black;
-    /* padding: .8rem 9%; */
-    /* position: relative; */
-    /* z-index: 1000; */
 }
 
 .navbar {
@@ -111,7 +108,6 @@ input[id="change-status"]:checked ~ .night {
     border: 1px solid var(--orange);
     background-color: var(--orange);
     padding: 10px 20px;
-    font-family: "Nunito", sans-serif;
     display: flex;
     margin-right: 10%;
 }
@@ -137,11 +133,6 @@ input[id="change-status"]:checked ~ .night {
     text-align: center;
     z-index: 10; 
 }
-
-/* .home, .content {
-    position: relative;
-    z-index: 10; 
-} */
 
 .home .content span {
     font-size: 4vw;
@@ -170,6 +161,12 @@ input[id="change-status"]:checked ~ .night {
     border-radius: 99px;
     font-size: 1.8rem;
     color: #333;
+}
+
+#change-status:checked ~ .night .btn-change-toggle i:before {
+    content: "\f186";
+    padding: 3px ;
+    cursor: pointer;
 }
 
 /* end home */
@@ -455,7 +452,7 @@ input[id="change-status"]:checked ~ .night {
 }
 
 .review .box-container .row .item:hover {
-    outline: 2px solid var(--orange);
+    outline: 1px solid var(--orange);
 }
 
 .review .box-container .row .item p {
@@ -487,11 +484,20 @@ input[id="change-status"]:checked ~ .night {
 }
 
 #change-status:checked ~ .night .review .box-container .row .item {
-    background-color: #fff;
-    border: 2px solid var(--orange);
+    background-color:#efefef;
+    border: 1px solid var(--orange);
+}
+
+#change-status:checked ~ .night .review .box-container .row .item:hover {
+    background-color:#fff;
+    /* border: 2px solid var(--orange); */
 }
 
 /* end review */
+
+.blogs {
+    margin-bottom: 30px;
+}
 
 .blogs .blogs-heading {
     font-family: "Nunito", sans-serif;
@@ -543,6 +549,10 @@ input[id="change-status"]:checked ~ .night {
     font-size: 1.4em;
     color: #aaa;
     line-height: 2;
+}
+
+#change-status:checked ~ .night .blogs .box-container .item .content a {
+    color: #333;
 }
 
 #change-status:checked ~ .night .blogs .box-container .item {
