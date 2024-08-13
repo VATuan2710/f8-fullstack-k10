@@ -268,13 +268,16 @@ input[id="change-status"]:checked ~ .night {
     position: relative;
     border-radius: 10px ;
     overflow: hidden;
-    background: #222;
+    background-color: #222;
+}
+
+#change-status:checked ~ .night .destination .box-container .item {
+    background-color: #fff;
 }
 
 .destination .box-container .item img {
     width: 100%;
     height: 100%;
-    border-radius: 10px ;
 }
 
 .destination .box-container .content {
@@ -334,13 +337,22 @@ input[id="change-status"]:checked ~ .night {
 
 .service .box-container .item {
     font-family: "Nunito", sans-serif;
-    background: #222;
+    background-color: #222;
     border-radius: 1rem;
     padding: 3rem 0;
     text-align: center;
-    border: .2em solid #111;
+    border: 2px solid #111;
     height: 100%;
     margin-bottom: 10px;
+}
+
+#change-status:checked ~ .night .service .box-container .item {
+    background-color: #efefef;
+    border: 2px solid var(--orange);
+}
+
+#change-status:checked ~ .night .service .box-container .item:hover {
+    background-color: #fff;
 }
 
 .service .box-container .item:hover {
@@ -364,6 +376,10 @@ input[id="change-status"]:checked ~ .night {
     color: #aaa;
 }
 
+#change-status:checked ~ .night .item h3,
+#change-status:checked ~ .night .service-heading h2 {
+    color: #333;
+}
 
 /* end service */
 
@@ -399,6 +415,14 @@ input[id="change-status"]:checked ~ .night {
 .gallery .box-container .item .content h3 {
     font-size: 2rem;
     color: #fff;
+}
+
+#change-status:checked ~ .night .item .content span {
+    color: #555;
+}
+
+#change-status:checked ~ .night .item .content h3 {
+    color:  var(--orange);
 }
 
 /* end gallery */
@@ -457,6 +481,11 @@ input[id="change-status"]:checked ~ .night {
     color: #aaa;
 }
 
+#change-status:checked ~ .night .review .box-container .row .item {
+    background-color: #fff;
+    border: 2px solid var(--orange);
+}
+
 /* end review */
 
 .blogs .blogs-heading {
@@ -476,6 +505,10 @@ input[id="change-status"]:checked ~ .night {
 .blogs .blogs-heading h2 {
     font-size: 4rem;
     color: #fff;
+}
+
+#change-status:checked ~ .night .blogs .blogs-heading h2  {
+    color: #333;
 }
 
 .blogs .box-container .item {
@@ -509,6 +542,10 @@ input[id="change-status"]:checked ~ .night {
     line-height: 2;
 }
 
+#change-status:checked ~ .night .blogs .box-container .item {
+    background-color: #fff;
+}
+
 /* end blogs */
 
 .banner {
@@ -518,7 +555,6 @@ input[id="change-status"]:checked ~ .night {
     background-size: cover;
     background-position: center;
     padding: 30px 20px;
-    margin: 20px 0;
 }
 
 .banner .content {
@@ -555,6 +591,7 @@ input[id="change-status"]:checked ~ .night {
 .footer {
     padding: 3rem 0;
     font-family: "Nunito", sans-serif;
+    background-color: rgba(0, 0, 0, 0.92);
 }
 
 .footer .box-container .row .logo-footer a {
@@ -683,4 +720,6 @@ input[id="change-status"]:checked ~ .night {
         font-size: 2rem;
         margin: 2rem;
     }
+
+    
 }
