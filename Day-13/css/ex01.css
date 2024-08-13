@@ -1,0 +1,686 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.night {
+    width: 100%;
+    /* height: auto; */
+    position: absolute;
+    background-color: #111;
+    transition: background-color 0.8s ease;
+}
+
+:root {
+    --orange: #ffa500;
+}
+
+a {
+    color: #aaa;
+    text-decoration: none;   
+}
+
+header {
+    background-color: black;
+    /* padding: .8rem 9%; */
+    /* position: relative; */
+    /* z-index: 1000; */
+}
+
+.navbar {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    font-family: "Font Awesome 5 Free" , sans-serif;
+    color: black;
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(34, 34, 34, .9);
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 10%;
+}
+
+.logo a {
+    color: #fff;
+}
+
+.logo a span  {
+    color: var(--orange);
+}
+
+.navbar .menu {
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    gap: 20px;
+    font-size: 1.6rem;
+}
+
+.navbar .btn-change-toggle {
+    font-size: 1.8rem;
+    border-radius: 99px;
+    border: 2px solid var(--orange) ;
+    padding: 5px;
+    color: var(--orange);
+    cursor: pointer;
+    margin-left: 10%;
+}
+
+input[id="change-status"]:checked ~ .night {
+    background-color: #efefef;
+}
+
+#change-status:checked ~ .night .menu a {
+    color: #efefef;
+}
+
+#change-status:checked ~ .night .book-form {
+    background-color: #efefef;
+}
+
+#change-status:checked ~ .night .book-form form a {
+    color: #efefef;
+}
+
+.navbar .btn {
+    font-size: 1.6rem;
+    border-radius: 99px;
+    border: 1px solid var(--orange);
+    background-color: var(--orange);
+    padding: 10px 20px;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    margin-right: 10%;
+}
+
+.navbar .btn a {
+    color: black;
+}
+
+.home {
+    background-image: url("https://stravelhtml.vercel.app/mumbai/images/home-bg.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    /* height: auto; */
+    margin-top: 9rem;
+    width: 90%;
+    border-radius: 10px;
+    /* position: relative; */
+}
+
+.home .content {
+    padding: 10%;
+    text-align: center;
+    z-index: 10; 
+}
+
+/* .home, .content {
+    position: relative;
+    z-index: 10; 
+} */
+
+.home .content span {
+    font-size: 4vw;
+    -webkit-text-stroke: .1rem var(--orange);
+}
+
+.home .content h3 {
+    font-size: 5vw;
+    color: #fff;
+}
+
+.home .content p {
+    font-size: 1.5em;
+    display: block;
+    margin: 1rem auto;
+    max-width: 60rem;
+    color: #aaa;
+    line-height: 2;
+}
+
+.home .content a {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--orange);
+    border-radius: 99px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* end home */
+
+.book-form {
+    background-color: #222;
+    width: 80% ;
+    margin: 1rem auto;
+    margin-top: -5rem;
+    z-index: 20000;
+}
+
+.book-form form {
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    /* justify-content: space-between;  */
+    /* position: relative; */
+    box-shadow: 0 .5rem 1rem rgba(17, 17, 17, .3);
+}
+
+.book-form form .form-ads-content {
+    flex: 1 1 25rem;
+}
+
+.book-form form .form-ads-content h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 3vw;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.book-form form .form-ads-btn {
+    display: flex;
+    flex: 1 1 25rem;
+    border-radius: 99px ;
+    color: #111;
+    font-size: 1.5rem;
+    background-color: var(--orange);
+}
+
+.book-form form .form-ads-btn a {
+    width: 100%;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+}
+
+/* end book form */
+
+.about {
+    color: red;
+}
+
+/* end about */
+
+
+.destination {
+    font-family: "Nunito", sans-serif;
+    display: block;
+    margin: 0 auto;
+}
+
+.destination .heading {
+    text-align: center;
+}
+
+.destination .heading  span{
+    display: block;
+    margin-top: 50px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--orange)
+}
+
+
+.destination .heading h2 {
+    font-size: 4rem;
+    margin: 20px;
+    color: #efefef;
+}
+
+#change-status:checked ~ .night .destination .heading h2 {
+    color: #333;
+}
+
+.box-container {
+    display: block;
+    width: 82%;
+    margin: 0 auto;
+}
+
+.destination .box-container .item {
+    position: relative;
+    border-radius: 10px ;
+    overflow: hidden;
+    background: #222;
+}
+
+.destination .box-container .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px ;
+}
+
+.destination .box-container .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.destination .box-container .content h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+#change-status:checked ~ .night .destination .box-container .content h3 {
+    color: #333;
+}
+
+.destination .box-container .content p {
+    margin-bottom: 2em;
+    padding: 1rem 0;
+    font-size: 1.4em;
+    color: #aaa;
+    line-height: 2;
+}
+
+.destination .box-container .content a {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--orange);
+}
+
+/* end destination */
+
+.service {
+    margin-bottom: 50px;
+}
+
+.service-heading {
+    font-family: "Nunito", sans-serif;
+    display: block;
+    text-align: center;
+    margin: 30px;
+}
+
+.service-heading span {
+    font-size: 2rem;
+    color: var(--orange);
+}
+.service-heading h2 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.service .box-container .item {
+    font-family: "Nunito", sans-serif;
+    background: #222;
+    border-radius: 1rem;
+    padding: 3rem 0;
+    text-align: center;
+    border: .2em solid #111;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.service .box-container .item:hover {
+    border: .2em solid var(--orange);
+}
+
+.service .box-container .item i {
+    font-size: 4rem;
+    color: var(--orange);
+    margin-bottom: 20px ;
+}
+
+.service .box-container .item h3 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.service .box-container .item p {
+    font-size: 1.4rem;
+    color: #aaa;
+}
+
+
+/* end service */
+
+.gallery {
+    margin-bottom: 50px;
+}
+
+.gallery .gallery-heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery .gallery-heading h2 {
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.gallery .box-container .item {
+    font-family: "Nunito", sans-serif;
+}
+
+.gallery .box-container .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px ;
+}
+
+.gallery .box-container .item .content span {
+    color: var(--orange);
+    font-size: 1.4rem;
+}
+
+.gallery .box-container .item .content h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* end gallery */
+
+.review .box-container .row {
+    display: flex;
+    align-items: center;
+}
+
+.review .box-container .row h2 {
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.review .box-container .row p {
+    font-size: 1.4rem;
+    color: #aaa;
+}
+
+.review .box-container .row .item {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.review .box-container .row .item:hover {
+    outline: 2px solid var(--orange);
+}
+
+.review .box-container .row .item p {
+    font-size: 1.4rem ;
+    color: #aaa;
+    padding: 0 0 10px;
+}
+
+.review .box-container .row .item .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review .box-container .row .item .user img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 99px;
+}
+
+.review .box-container .row .item .user h3 {
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.review .box-container .row .item .user span {
+    font-size: 1.5rem;
+    color: #aaa;
+}
+
+/* end review */
+
+.blogs .blogs-heading {
+    font-family: "Nunito", sans-serif;
+    display: block;
+    text-align: center;
+    margin: 30px;
+}
+
+
+
+.blogs .blogs-heading span {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.blogs .blogs-heading h2 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.blogs .box-container .item {
+    border-radius: 10px;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, .2);
+    background: #222;
+    overflow: hidden;
+    padding: 0;
+}
+
+.blogs .box-container .item .image img {
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.blogs .box-container .item .content {
+    padding: 20px;
+}
+
+.blogs .box-container .item .content a {
+    font-size: 2rem;
+    color: #fff;
+ 
+}
+
+.blogs .box-container .item .content p {
+    padding: 1rem 0;
+    font-size: 1.4em;
+    color: #aaa;
+    line-height: 2;
+}
+
+/* end blogs */
+
+.banner {
+    width: 100%;
+    background-image: url("https://stravelhtml.vercel.app/mumbai/images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px;
+    margin: 20px 0;
+}
+
+.banner .content {
+    text-align: center;
+}
+
+.banner .content span {
+    color: var(--orange);
+    font-size: 2rem;
+}
+
+.banner .content h3 {
+    color: #fff;
+    font-size: 4rem;
+    margin: 10px 0 0;
+}
+
+.banner .content p {
+    color: #aaa;
+    font-size: 1.4rem;
+}
+
+.banner .content .btn {
+    display: inline-block;
+    background-color: var(--orange);
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #111;
+    border-radius: 99px;
+}
+
+/* end banner */
+
+.footer {
+    padding: 3rem 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.footer .box-container .row .logo-footer a {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.footer .box-container .row .logo-footer a span {
+    color: var(--orange);
+}
+
+.footer .box-container .row .logo-footer p {
+    color: #aaa;
+    font-size: 1.4rem;
+    padding: 10px 0; 
+    line-height: 2;
+}
+
+.footer .box-container .row .logo-footer .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.1rem;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    margin-right: .5rem;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.footer .box-container .row .logo-footer .share a i {
+    font-size: 1.2rem;
+    color: var(--orange);
+}
+
+.footer .box-container .row h3 {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.footer .box-container .row .the-other-footer a {
+    display: block;
+    font-size: 1.2rem;
+    color: #aaa;
+    padding: 10px 0;
+}
+
+.footer .box-container .row .the-other-footer a i {
+    color: var(--orange);
+}
+
+.footer .box-container .row .the-other-footer p {
+    color: #aaa;
+    padding: 10px 0;
+    font-size: 1.3rem;
+}
+
+.footer .box-container .row .the-other-footer p i {
+    padding-right: 5px;
+    color: var(--orange);
+}
+
+.footer .box-container .row .the-other-footer form .email {
+    width: 100%;
+    border-radius: 99px;
+    border: 2px solid var(--orange);
+    background: none;
+    font-size: 1.5rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1.2rem;
+}
+
+.footer .box-container .row .the-other-footer form .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #111;
+    padding: 5px 10px;
+    border: .2rem solid var(--orange);
+    border-radius: 5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+/* end footer */
+
+.credit {
+    background: #222;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    color: #aaa;
+}
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar .menu-toggle {
+        display: block;
+    }
+    .navbar .menu {
+        display: block;
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: rgba(34, 34, 34, .9);
+        transform: translate(-100%);
+    }
+    
+    .navbar input[id="menu-toggle"]:checked ~ .menu {
+        transform: translate(0);
+        transition: 0.4s ease;
+        transition-property: transform;
+
+    }
+    .navbar .menu a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem;
+    }
+}

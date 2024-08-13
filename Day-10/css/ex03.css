@@ -95,6 +95,7 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .container .envelope .card-container .card {
@@ -129,7 +130,6 @@ body {
 .container:hover .envelope {
     transform: translateY(50px);
 }
-
 
 .container:hover .shadow {
     transform: scale(0.8);

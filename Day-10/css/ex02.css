@@ -60,7 +60,7 @@ body {
 .body {
     position: relative;
     height: 600px; 
-    perspective: 1000px; 
+    /* perspective: 1000px;  */
 }
 
 .content {
