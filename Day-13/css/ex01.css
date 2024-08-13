@@ -281,7 +281,8 @@ input[id="change-status"]:checked ~ .night {
 
 .destination .box-container .item img {
     width: 100%;
-    height: 100%;
+    height: 20rem;
+    object-fit: cover;
 }
 
 .destination .box-container .content {
