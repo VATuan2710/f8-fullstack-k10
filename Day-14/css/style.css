@@ -1,0 +1,530 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+    quy ước : 
+    .container ---> khung bọc có kịch thước cố định
+    .row --> hàng
+    .col-[number] --> cột với số lương ô muốn chiếm ( number từ 1 --> 12 )
+
+    Concept
+    Section > container > row > col > item
+
+    Responsive ( xây dựng theo mobile first )
+    .col-{number} --> màn hình nhỏ nhất
+    .col-sm-{number} --> Màn hình >= 576px
+    .col-md-{number) --> Màn hình >= 768px
+    .col-lg-{number) --> Màn hình >= 992px
+    .col-xl-{number) --> Màn hình >= 1200px
+    .col-xxl-{number) --> Màn hình >= 1400px
+
+    vì dùng mobile first nên sẽ là min-width
+    .col-offset-{number} --> màn hình nhỏ nhất
+    .col-offset-sm-{number} --> Màn hình >= 576px
+    .col-offset-md-{number) --> Màn hình >= 768px
+    .col-offset-lg-{number) --> Màn hình >= 992px
+    .col-offset-xl-{number) --> Màn hình >= 1200px
+    .col-offset-xxl-{number) --> Màn hình >= 1400px  
+    Note: từ màn hình sm trở lên phải thêm offset-0  
+
+*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(20px);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1 * var(20px) / 2);
+  /* gap: calc(var(--column--space)/2) ; */
+}
+
+[class^=col-] {
+  flex-basis: calc(8.3333333333% * var(--col-size));
+  max-width: calc(8.3333333333% * var(--col-size));
+  padding: 0 calc(var(20px) / 2);
+  margin-bottom: calc(var 10px);
+  /* gap: 20px */
+}
+
+[class*=col-offset-] {
+  margin-left: calc(8.3333333333% * var(--col-offset-size));
+}
+
+.col-1 {
+  --col-size: 1;
+}
+
+.col-2 {
+  --col-size: 2;
+}
+
+.col-3 {
+  --col-size: 3;
+}
+
+.col-4 {
+  --col-size: 4;
+}
+
+.col-5 {
+  --col-size: 5;
+}
+
+.col-6 {
+  --col-size: 6;
+}
+
+.col-7 {
+  --col-size: 7;
+}
+
+.col-8 {
+  --col-size: 8;
+}
+
+.col-9 {
+  --col-size: 9;
+}
+
+.col-10 {
+  --col-size: 10;
+}
+
+.col-11 {
+  --col-size: 11;
+}
+
+.col-12 {
+  --col-size: 12;
+}
+
+.col-offset-0 {
+  --col-offset-size: 1;
+}
+
+.col-offset-1 {
+  --col-offset-size: 1;
+}
+
+.col-offset-2 {
+  --col-offset-size: 2;
+}
+
+.col-offset-3 {
+  --col-offset-size: 3;
+}
+
+.col-offset-4 {
+  --col-offset-size: 4;
+}
+
+.col-offset-5 {
+  --col-offset-size: 5;
+}
+
+.col-offset-6 {
+  --col-offset-size: 6;
+}
+
+.col-offset-7 {
+  --col-offset-size: 7;
+}
+
+.col-offset-8 {
+  --col-offset-size: 8;
+}
+
+.col-offset-9 {
+  --col-offset-size: 9;
+}
+
+.col-offset-10 {
+  --col-offset-size: 10;
+}
+
+.col-offset-11 {
+  --col-offset-size: 11;
+}
+
+.col-offset-12 {
+  --col-offset-size: 12;
+}
+
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    --col-size: 1;
+  }
+  .col-sm-2 {
+    --col-size: 2;
+  }
+  .col-sm-3 {
+    --col-size: 3;
+  }
+  .col-sm-4 {
+    --col-size: 4;
+  }
+  .col-sm-5 {
+    --col-size: 5;
+  }
+  .col-sm-6 {
+    --col-size: 6;
+  }
+  .col-sm-7 {
+    --col-size: 7;
+  }
+  .col-sm-8 {
+    --col-size: 8;
+  }
+  .col-sm-9 {
+    --col-size: 9;
+  }
+  .col-sm-10 {
+    --col-size: 10;
+  }
+  .col-sm-11 {
+    --col-size: 11;
+  }
+  .col-sm-12 {
+    --col-size: 12;
+  }
+}
+@media screen and (min-width: 612px) {
+  .col-smd-1 {
+    --col-size: 1;
+  }
+  .col-smd-2 {
+    --col-size: 2;
+  }
+  .col-smd-3 {
+    --col-size: 3;
+  }
+  .col-smd-4 {
+    --col-size: 4;
+  }
+  .col-smd-5 {
+    --col-size: 5;
+  }
+  .col-smd-6 {
+    --col-size: 6;
+  }
+  .col-smd-7 {
+    --col-size: 7;
+  }
+  .col-smd-8 {
+    --col-size: 8;
+  }
+  .col-smd-9 {
+    --col-size: 9;
+  }
+  .col-smd-10 {
+    --col-size: 10;
+  }
+  .col-smd-11 {
+    --col-size: 11;
+  }
+  .col-smd-12 {
+    --col-size: 12;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    --col-size: 1;
+  }
+  .col-md-2 {
+    --col-size: 2;
+  }
+  .col-md-3 {
+    --col-size: 3;
+  }
+  .col-md-4 {
+    --col-size: 4;
+  }
+  .col-md-5 {
+    --col-size: 5;
+  }
+  .col-md-6 {
+    --col-size: 6;
+  }
+  .col-md-7 {
+    --col-size: 7;
+  }
+  .col-md-8 {
+    --col-size: 8;
+  }
+  .col-md-9 {
+    --col-size: 9;
+  }
+  .col-md-10 {
+    --col-size: 10;
+  }
+  .col-md-11 {
+    --col-size: 11;
+  }
+  .col-md-12 {
+    --col-size: 12;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    --col-size: 1;
+  }
+  .col-lg-2 {
+    --col-size: 2;
+  }
+  .col-lg-3 {
+    --col-size: 3;
+  }
+  .col-lg-4 {
+    --col-size: 4;
+  }
+  .col-lg-5 {
+    --col-size: 5;
+  }
+  .col-lg-6 {
+    --col-size: 6;
+  }
+  .col-lg-7 {
+    --col-size: 7;
+  }
+  .col-lg-8 {
+    --col-size: 8;
+  }
+  .col-lg-9 {
+    --col-size: 9;
+  }
+  .col-lg-10 {
+    --col-size: 10;
+  }
+  .col-lg-11 {
+    --col-size: 11;
+  }
+  .col-lg-12 {
+    --col-size: 12;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    --col-size: 1;
+  }
+  .col-xl-2 {
+    --col-size: 2;
+  }
+  .col-xl-3 {
+    --col-size: 3;
+  }
+  .col-xl-4 {
+    --col-size: 4;
+  }
+  .col-xl-5 {
+    --col-size: 5;
+  }
+  .col-xl-6 {
+    --col-size: 6;
+  }
+  .col-xl-7 {
+    --col-size: 7;
+  }
+  .col-xl-8 {
+    --col-size: 8;
+  }
+  .col-xl-9 {
+    --col-size: 9;
+  }
+  .col-xl-10 {
+    --col-size: 10;
+  }
+  .col-xl-11 {
+    --col-size: 11;
+  }
+  .col-xl-12 {
+    --col-size: 12;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    padding: 0;
+  }
+  .col-xxl-1 {
+    --col-size: 1;
+  }
+  .col-xxl-2 {
+    --col-size: 2;
+  }
+  .col-xxl-3 {
+    --col-size: 3;
+  }
+  .col-xxl-4 {
+    --col-size: 4;
+  }
+  .col-xxl-5 {
+    --col-size: 5;
+  }
+  .col-xxl-6 {
+    --col-size: 6;
+  }
+  .col-xxl-7 {
+    --col-size: 7;
+  }
+  .col-xxl-8 {
+    --col-size: 8;
+  }
+  .col-xxl-9 {
+    --col-size: 9;
+  }
+  .col-xxl-10 {
+    --col-size: 10;
+  }
+  .col-xxl-11 {
+    --col-size: 11;
+  }
+  .col-xxl-12 {
+    --col-size: 12;
+  }
+}
+.header {
+  margin-top: 45px;
+  display: flex;
+  font-size: 1.4rem;
+  align-items: center;
+  margin-right: auto;
+}
+.header .search-form {
+  display: flex;
+}
+.header .search-form i {
+  font-size: 1.7rem;
+  margin-top: 2px;
+}
+.header .search-form .search {
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  padding-right: 100px;
+  border-radius: 99px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.2039215686);
+  font-family: inherit;
+}
+.header .navbar {
+  font-size: 1.8rem;
+  display: flex;
+  column-gap: 40px;
+}
+.header .navbar .nav-link {
+  position: relative;
+}
+.header .navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #000;
+  transition: width 0.5s;
+}
+.header .navbar .nav-link:hover::after, .header .navbar .nav-link.active::after {
+  width: 100%;
+}
+.header .actions {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  margin-left: 60px;
+}
+.header .actions .action-link {
+  font-size: 2rem;
+}
+
+.side-bar {
+  margin-top: 35px;
+  padding-left: 80px;
+}
+.side-bar .heading {
+  margin-top: 40px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.side-bar .navbar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 30px;
+}
+.side-bar .navbar .nav-item {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px 6px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  transition: background-color 0.5s;
+}
+.side-bar .navbar .chat-btn {
+  font-size: 1.6rem;
+  margin-top: auto;
+  position: sticky;
+  bottom: 62px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.side-bar .navbar .chat-btn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f6f6f6;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: dense;
+  grid-auto-rows: 188px;
+  gap: 22px;
+  margin-top: 50px;
+}
+.main .wide {
+  grid-column: span 2;
+}
+.main .tall {
+  grid-row: span 2;
+}
+.main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
