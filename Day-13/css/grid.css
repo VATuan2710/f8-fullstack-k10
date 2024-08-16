@@ -14,7 +14,7 @@
     .col-lg-{number) --> Màn hình >= 992px
     .col-xl-{number) --> Màn hình >= 1200px
     .col-xxl-{number) --> Màn hình >= 1400px
-    
+        
     vì dùng mobile first nên sẽ là min-width
     .col-offset-{number} --> màn hình nhỏ nhất
     .col-offset-sm-{number} --> Màn hình >= 576px
