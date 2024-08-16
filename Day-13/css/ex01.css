@@ -836,6 +836,9 @@ input[id="change-status"]:checked ~ .night {
     html {
         font-size: 50%;
     }
+    .night section {
+        padding: 3rem 2rem;
+    }
     .review .box-container .row .review-heading p {
         margin: 20px 0;
         display: block;
@@ -876,5 +879,5 @@ input[id="change-status"]:checked ~ .night {
     html {
         font-size: 50%;
     }   
-    
+
 }

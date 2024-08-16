@@ -1,3 +1,31 @@
+/*
+    quy ước : 
+    .container ---> khung bọc có kịch thước cố định
+    .row --> hàng
+    .col-[number] --> cột với số lương ô muốn chiếm ( number từ 1 --> 12 )
+
+    Concept
+    Section > container > row > col > item
+
+    Responsive ( xây dựng theo mobile first )
+    .col-{number} --> màn hình nhỏ nhất
+    .col-sm-{number} --> Màn hình >= 576px
+    .col-md-{number) --> Màn hình >= 768px
+    .col-lg-{number) --> Màn hình >= 992px
+    .col-xl-{number) --> Màn hình >= 1200px
+    .col-xxl-{number) --> Màn hình >= 1400px
+    
+    vì dùng mobile first nên sẽ là min-width
+    .col-offset-{number} --> màn hình nhỏ nhất
+    .col-offset-sm-{number} --> Màn hình >= 576px
+    .col-offset-md-{number) --> Màn hình >= 768px
+    .col-offset-lg-{number) --> Màn hình >= 992px
+    .col-offset-xl-{number) --> Màn hình >= 1200px
+    .col-offset-xxl-{number) --> Màn hình >= 1400px  
+    Note: từ màn hình sm trở lên phải thêm offset-0  
+
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -133,6 +161,57 @@
 .col-offset-12 {
     --col-offset-size: 12;
 }
+
+@media screen and (min-width:(480px)) {
+    .col-ssm-1 {
+        --col-size : 1;
+    }
+    
+    .col-ssm-2 {
+        --col-size: 2;
+    }
+    
+    .col-ssm-3 {
+        --col-size: 3;
+    }
+    
+    .col-ssm-4 {
+        --col-size: 4;
+    }
+    
+    .col-ssm-5 {
+        --col-size: 5;
+    }
+    
+    .col-ssm-6 {
+        --col-size: 6;
+    }
+    
+    .col-ssm-7 {
+        --col-size: 7;
+    }
+    
+    .col-ssm-8 {
+        --col-size: 8;
+    }
+    
+    .col-ssm-9 {
+        --col-size: 9;
+    }
+    
+    .col-ssm-10 {
+        --col-size: 10;
+    }
+    
+    .col-ssm-11 {
+        --col-size: 11;
+    }
+    
+    .col-ssm-12 {
+        --col-size: 12;
+    }
+}
+
 @media screen and (min-width:(576px)) {
     .col-sm-1 {
         --col-size : 1;
@@ -179,6 +258,106 @@
     }
     
     .col-sm-12 {
+        --col-size: 12;
+    }
+}
+
+@media screen and (min-width:(589px)) {
+    .col-smm-1 {
+        --col-size : 1;
+    }
+    
+    .col-smm-2 {
+        --col-size: 2;
+    }
+    
+    .col-smm-3 {
+        --col-size: 3;
+    }
+    
+    .col-smm-4 {
+        --col-size: 4;
+    }
+    
+    .col-smm-5 {
+        --col-size: 5;
+    }
+    
+    .col-smm-6 {
+        --col-size: 6;
+    }
+    
+    .col-smm-7 {
+        --col-size: 7;
+    }
+    
+    .col-smm-8 {
+        --col-size: 8;
+    }
+    
+    .col-smm-9 {
+        --col-size: 9;
+    }
+    
+    .col-smm-10 {
+        --col-size: 10;
+    }
+    
+    .col-smm-11 {
+        --col-size: 11;
+    }
+    
+    .col-smm-12 {
+        --col-size: 12;
+    }
+}
+
+@media screen and (min-width: 612px) {
+    .col-smd-1 {
+        --col-size : 1;
+    }
+    
+    .col-smd-2 {
+        --col-size: 2;
+    }
+    
+    .col-smd-3 {
+        --col-size: 3;
+    }
+    
+    .col-smd-4 {
+        --col-size: 4;
+    }
+    
+    .col-smd-5 {
+        --col-size: 5;
+    }
+    
+    .col-smd-6 {
+        --col-size: 6;
+    }
+    
+    .col-smd-7 {
+        --col-size: 7;
+    }
+    
+    .col-smd-8 {
+        --col-size: 8;
+    }
+    
+    .col-smd-9 {
+        --col-size: 9;
+    }
+    
+    .col-smd-10 {
+        --col-size: 10;
+    }
+    
+    .col-smd-11 {
+        --col-size: 11;
+    }
+    
+    .col-smd-12 {
         --col-size: 12;
     }
 }
