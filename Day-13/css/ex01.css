@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
+    text-transform: capitalize;
 }
 
 html {
@@ -176,6 +177,7 @@ input[id="change-status"]:checked ~ .night {
     width: 80% ;
     margin: 1rem auto;
     margin-top: -5rem;
+    margin-bottom: 50px;
     z-index: 20000;
 }
 
@@ -222,7 +224,58 @@ input[id="change-status"]:checked ~ .night {
 /* end book form */
 
 .about {
-    color: red;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about .video-container .controls {
+    text-align: center;
+}
+
+.about .video-container .controls span {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    cursor: pointer;
+    margin: 10px;
+}
+
+.about .box-container .content {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about .box-container .content span {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.about .box-container .content h3 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.about .box-container .content p {
+    font-size: 1.7rem;
+    color: #aaa;
+}
+
+.about .box-container .content a {
+    font-size: 2rem;
+    color: #111;
+    padding: 10px 20px;
+    background-color: var(--orange);
+    border-radius: 99px;
+    margin-top: 20px;
+    display: inline-block;
 }
 
 /* end about */
@@ -495,6 +548,73 @@ input[id="change-status"]:checked ~ .night {
 
 /* end review */
 
+.contact .heading {
+    font-family: "Nunito", sans-serif;
+    display: block;
+    text-align: center;
+    margin: 30px;
+}
+
+.contact .heading span {
+    color: var(--orange);
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.contact .box-container .image {
+    margin-top: 20px;
+}
+
+.contact .box-container .row form {
+    background: #222;
+    padding: 0 20px;
+    box-shadow: 0 0em 10em #ffa6002c;
+    border-radius: .5rem;
+}
+
+.contact .box-container .row form .input-contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .box-container .row form .input-contact-form input {
+    width: 49%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.7rem;
+    color: #efefef;
+    background: #333;
+    border: 1px solid var(--orange);
+    text-transform: none;
+}
+
+.contact .box-container .row form  textarea {
+    height: 150px;
+    resize: none;
+    width: 100%;
+    background-color: #333;
+    font-size: 1.7rem;
+    color: #efefef;
+    border: 1px solid var(--orange);
+}
+
+.contact .box-container .row form .btn-contact-form {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--orange);
+    color: #111;
+    padding: 10px 20px;
+    border: 2px solid var(--orange);
+    border-radius: 99px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+
+/* end contact */
+
 .blogs {
     margin-bottom: 30px;
 }
@@ -712,7 +832,6 @@ input[id="change-status"]:checked ~ .night {
     }
 }
 
-
 @media screen and (max-width: 991px) {
     html {
         font-size: 50%;
@@ -722,9 +841,6 @@ input[id="change-status"]:checked ~ .night {
         display: block;
     }
 }
-
-
-
 
 @media screen and (max-width: 768px) {
     html {
@@ -760,4 +876,5 @@ input[id="change-status"]:checked ~ .night {
     html {
         font-size: 50%;
     }   
+    
 }
