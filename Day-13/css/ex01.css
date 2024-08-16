@@ -702,14 +702,34 @@ input[id="change-status"]:checked ~ .night {
     color: #aaa;
 }
 
-@media screen and (max-width: 991px) {
-    html {
+@media screen and (max-width: 1199px) {
+    /* html {
         font-size: 50%;
+    } */
+    .review .box-container .row .review-heading p {
+        margin: 20px 0;
+        display: block;
     }
 }
 
 
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
+    .review .box-container .row .review-heading p {
+        margin: 20px 0;
+        display: block;
+    }
+}
+
+
+
+
 @media screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
     .navbar .menu-toggle {
         display: block;
     }
@@ -734,6 +754,10 @@ input[id="change-status"]:checked ~ .night {
         font-size: 2rem;
         margin: 2rem;
     }
+}
 
-
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 50%;
+    }   
 }
