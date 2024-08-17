@@ -26,8 +26,39 @@ html {
     z-index: 15;
 }
 
+@media screen and (max-width: 1399px) {
+    // .main {
+    //     margin-right: 20px;
+    // }
+}
+
+@media screen and (max-width:1199px) {
+    .header {
+        .navbar {
+            display: flex;
+        }
+    }
+    .side-bar {
+        padding-left: 40px;
+    }
+
+    .main {
+        padding-right: 20px;
+    }
+}
 
 @media screen and (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
+    // .header {
+    //     .navbar {
+    //         display: none;
+    //     }
+    // }
+}
+
+@media screen and (max-width: 768px) {
     html {
         font-size: 50%;
     }
@@ -72,12 +103,23 @@ html {
         .menu-toggle {
             display: block;
         }
+
     }
     
     .main-wrapper {
         .main {
+            grid-area: main;
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
+            grid-auto-flow: dense;
+            grid-auto-rows: 188px;
+            gap: 22px;
         }
     }
 }
 
+@media screen and (max-width: 480px) {
+    .side-bar {
+        padding-left: 0px;
+    }
+}
