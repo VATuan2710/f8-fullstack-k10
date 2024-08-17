@@ -50,6 +50,8 @@ html {
     }
 
     .side-bar  {
+        margin: 0;
+        padding-top: 40px;
         width: 300px;
         height: 100%;
         display: block;
@@ -60,13 +62,16 @@ html {
         background-color: #fff;
         transform: translate(-100%);
         z-index: 20;
+        .navbar {
+            .chat-btn {
+                bottom: 10px;
+            }
+        }
     }
-
     .header {
         .menu-toggle {
             display: block;
         }
-
     }
     
     .main-wrapper {
