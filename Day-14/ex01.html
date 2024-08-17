@@ -15,10 +15,14 @@
     />
   </head>
   <body>
+    <input type="checkbox" id="menu-toggle" hidden />
+
+    <label for="menu-toggle"> <div class="overlay"></div></label>
+
     <div class="container">
       <div class="row">
         <!-- side-bar -->
-        <div class="col-3 side-bar">
+        <div class="col-3 col-lg-3 side-bar">
           <div class="logo">
             <img src="Images/logo-pro-vip.svg" alt="logo" />
           </div>
@@ -112,55 +116,68 @@
           </nav>
         </div>
         <!-- end side-bar -->
-        <div class="col-9">
+
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 content"
+        >
           <!-- header -->
-          <div class="header">
-            <form action="" class="search-form">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" class="search" placeholder="Search store" />
-            </form>
-            <nav class="navbar">
-              <a href="" class="nav-link active">Products</a>
-              <a href="" class="nav-link">Story</a>
-              <a href="" class="nav-link">Manufacturing</a>
-              <a href="" class="nav-link">Packaging</a>
-            </nav>
-            <div class="actions">
-              <a href="" class="action-link">
-                <i class="fa-solid fa-bag-shopping"></i>
-              </a>
-              <a href="" class="action-link">
-                <i class="fa-solid fa-user-tie"></i>
-              </a>
+          <div class="row">
+            <div class="header col-12 col-sm-12 col-md-12">
+              <label class="menu-toggle" for="menu-toggle">
+                <i class="fa-solid fa-bars"> </i>
+              </label>
+              <form action="" class="search-form">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="search" placeholder="Search store" />
+              </form>
+              <nav class="navbar">
+                <a href="" class="nav-link active">Products</a>
+                <a href="" class="nav-link">Story</a>
+                <a href="" class="nav-link">Manufacturing</a>
+                <a href="" class="nav-link">Packaging</a>
+              </nav>
+              <div class="actions">
+                <a href="" class="action-link">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </a>
+                <a href="" class="action-link">
+                  <i class="fa-solid fa-user-tie"></i>
+                </a>
+              </div>
             </div>
           </div>
           <!-- end header -->
-          <!-- main -->
-          <div class="main">
-            <div class="wide">
-              <img src="./Images/flower-1.jpg" alt="" />
-            </div>
-            <div class="tall">
-              <img src="./Images/flower-2.jpg" alt="" />
-            </div>
-            <div class="wide">
-              <img src="./Images/flower-3.jpg" alt="" />
-            </div>
 
-            <div class="tall">
-              <img src="./Images/flower-4.jpg" alt="" />
-            </div>
-            <div class="tall">
-              <img src="./Images/flower-5.jpg" alt="" />
-            </div>
-            <div class="tall">
-              <img src="./Images/flower-6.jpg" alt="" />
-            </div>
-            <div class="wide">
-              <img src="./Images/flower-7.jpg" alt="" />
-            </div>
-            <div class="wide">
-              <img src="./Images/flower-8.jpg" alt="" />
+          <!-- main -->
+          <div class="row">
+            <div class="main-wrapper col-12 col-sm-12 col-md-12">
+              <div class="main">
+                <div class="wide">
+                  <img src="./Images/flower-1.jpg" alt="" />
+                </div>
+                <div class="tall">
+                  <img src="./Images/flower-2.jpg" alt="" />
+                </div>
+                <div class="wide">
+                  <img src="./Images/flower-3.jpg" alt="" />
+                </div>
+
+                <div class="tall">
+                  <img src="./Images/flower-4.jpg" alt="" />
+                </div>
+                <div class="tall">
+                  <img src="./Images/flower-5.jpg" alt="" />
+                </div>
+                <div class="tall">
+                  <img src="./Images/flower-6.jpg" alt="" />
+                </div>
+                <div class="wide">
+                  <img src="./Images/flower-7.jpg" alt="" />
+                </div>
+                <div class="wide">
+                  <img src="./Images/flower-8.jpg" alt="" />
+                </div>
+              </div>
             </div>
           </div>
           <!-- end main -->

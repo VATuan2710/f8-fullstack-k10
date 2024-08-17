@@ -4,13 +4,23 @@
     font-size: 1.4rem;
     align-items: center;
     margin-right: auto;
+    .menu-toggle {
+        margin: 20px;
+        font-size: 2rem;
+        display: none;
+    }
     .search-form {
+        position: relative;
+        z-index: 10;
         display: flex;
         i {
+            position: relative;
             font-size: 1.7rem;
             margin-top: 2px;
+            z-index: 10;
         }
         .search {
+            margin-right: 20px;
             outline: none;
             border: none;
             padding: 0 10px;
@@ -50,6 +60,7 @@
         align-items: center;
         column-gap: 30px;
         margin-left: 60px;
+        position: relative;
         .action-link {
             font-size: 2rem;
         }

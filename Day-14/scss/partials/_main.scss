@@ -1,24 +1,27 @@
-.main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-flow: dense;
-    grid-auto-rows: 188px;
-    gap: 22px;
-    margin-top: 50px ;
-
-    .wide {
-        grid-column: span 2;
-    }
-
-    .tall {
-        grid-row: span 2;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 16px;
+.main-wrapper {
+    width: 100%;
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: dense;
+        grid-auto-rows: 188px;
+        gap: 22px;
+        margin-top: 50px ;
+        position: relative;
+        .wide {
+            grid-column: span 2;
+        }
+    
+        .tall {
+            grid-row: span 2;
+        }
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
     }
 }
