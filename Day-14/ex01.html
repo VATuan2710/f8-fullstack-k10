@@ -16,7 +16,6 @@
   </head>
   <body>
     <input type="checkbox" id="menu-toggle" hidden />
-
     <label for="menu-toggle"> <div class="overlay"></div></label>
 
     <div class="container">
@@ -119,36 +118,38 @@
 
         <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9 content">
           <!-- header -->
-          <div class="row">
-            <div class="header col-12 col-sm-12 col-md-12">
-              <label class="menu-toggle" for="menu-toggle">
-                <i class="fa-solid fa-bars"> </i>
-              </label>
-              <form action="" class="search-form">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="search" placeholder="Search store" />
-              </form>
-              <nav class="navbar">
-                <a href="" class="nav-link active">Products</a>
-                <a href="" class="nav-link">Story</a>
-                <a href="" class="nav-link">Manufacturing</a>
-                <a href="" class="nav-link">Packaging</a>
-              </nav>
-              <div class="actions">
-                <a href="" class="action-link">
-                  <i class="fa-solid fa-bag-shopping"></i>
-                </a>
-                <a href="" class="action-link">
-                  <i class="fa-solid fa-user-tie"></i>
-                </a>
-              </div>
+          <div class="header">
+            <label class="menu-toggle" for="menu-toggle">
+              <i class="fa-solid fa-bars"> </i>
+            </label>
+            <form action="" class="search-form">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" class="search" placeholder="Search store" />
+            </form>
+            <label for="menu-toggle-header" class="menu-toggle-header">
+              <i class="fa-solid fa-arrow-down"></i>
+            </label>
+            <input type="checkbox" id="menu-toggle-header" hidden />
+            <nav class="navbar">
+              <a href="" class="nav-link active">Products</a>
+              <a href="" class="nav-link">Story</a>
+              <a href="" class="nav-link">Manufacturing</a>
+              <a href="" class="nav-link">Packaging</a>
+            </nav>
+            <div class="actions">
+              <a href="" class="action-link">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </a>
+              <a href="" class="action-link">
+                <i class="fa-solid fa-user-tie"></i>
+              </a>
             </div>
           </div>
           <!-- end header -->
 
           <!-- main -->
           <div class="row">
-            <div class="main-wrapper col-12">
+            <div class="main-wrapper">
               <div class="main">
                 <div class="wide">
                   <img src="./Images/flower-1.jpg" alt="" />
