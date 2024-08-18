@@ -30,11 +30,14 @@ ul {
     margin: 10px;
 }
 
-.container {
-    max-width: 1320px;
-    margin: 0 auto;
+img {
+    width: 100%;
+    display: block;
+}
+
+.navbar .container {
+    padding: 50px 0;
     position: relative;
-    padding: 30px;
 }
 
 .navbar .container {
@@ -132,14 +135,6 @@ ul {
     display: flex;
 }
 
-.row-left , .row-right {
-    flex: 1;
-}
-
-.row-left {
-    padding-top: 20px;
-}
-
 .row-content-top {
     display: flex;
     align-items: center;
@@ -159,7 +154,7 @@ ul {
 }
 
 .row-content-main h1 {
-    font-size: 4.4rem;
+    font-size: 3.8rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
 }
@@ -266,7 +261,7 @@ ul {
 
 .service-heading-2 {
     font-size: 40px;
-    max-width: 50%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -307,6 +302,7 @@ ul {
     font-size: 14px;
     color: #676767;
     padding: 25px 0;
+    max-width: 90%;
 }
 
 .service-container .service-content::before {
@@ -352,7 +348,7 @@ ul {
     line-height: 54px;
     text-transform: capitalize;
     color: var(--color2);
-    max-width: 80%;
+    /* max-width: 80%; */
     margin: 0 0 22px 0;
 }
 
@@ -361,7 +357,7 @@ ul {
     font-weight: 400;
     line-height: 30px;
     color: #676767;
-    max-width: 70%;
+    /* max-width: 70%; */
 }
 
 .feature-content a {
@@ -380,11 +376,28 @@ ul {
 
 /* end feature 1 */
 
+.feature-2-wrapper {
+    padding: 100px 0;
+}
+
 .feature-2-wrapper .feature-content span {
     color: #F9BA45;
 }
 
 /* end feature 2 */
+
+.download {
+    background-color: #FEF5F5;
+}
+
+.download-wrapper {
+    padding: 100px 0;
+}
+
+.download-image img {
+    width: auto;
+    margin: 0 auto;
+}
 
 .download-content {
     margin: 80px 0 20px 0;
@@ -404,7 +417,6 @@ ul {
     line-height: 54px;
     text-transform: capitalize;
     color: var(--color2);
-    max-width: 80%;
     margin: 0 0 22px 0;
 }
 
@@ -413,15 +425,128 @@ ul {
     font-weight: 400;
     line-height: 30px;
     color: #676767;
-    max-width: 70%;
 }
 
+.download-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.apple-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #2e2e2e;
+    padding: 18px 2px;
+    border: 1px solid #EEDCDC;
+    border-radius: 12px;
+}
+
+.appstore-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #2e2e2e;
+    padding: 18px 2px;
+    border: 1px solid #EEDCDC ;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+/* end download  */
+
+/* footer */
+
+.footer-logo-wrapper {
+    margin: 20px 0;
+}
+
+.footer-logo-wrapper .logo img {
+    width: auto;
+}
+
+.footer-logo-txt {
+    font-size: 1.6rem;
+    color: #676767;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 25px 0 10px 0;
+}
+
+.footer-content {
+    margin: 30px 0 10px 0;
+}
+
+.footer-content-title {
+    font-size: 1.8rem;
+    color:#2e2e2e;
+    font-weight: 600;
+    line-height: 20px;
+    /* letter-spacing: -0.01em; */
+}
+
+.footer-content-list {
+    margin: 30px 0 10px 0;
+}
+
+.footer-list-link {
+    line-height: 30px;
+}
+
+.footer-txt {
+    font-size: 1.6rem;
+    text-align: start;
+    font-weight: 400;
+    line-height: 26px;
+    color: #888888;
+}
+
+/* end top footer */
+
+.condition {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+.copyright-txt {
+    font-size: 1.4rem;
+}
+
+.footer-link {
+    font-size: 1.4rem;
+    margin: 0 10px;
+}
 
 @media screen and (min-width: 576px) {
    .container {
     max-width: 540px;
    }
+   .order-last {
+    order: 6 !important;
+   }
+   .footer-top {
+    text-align: center;
+   }
+   .footer-logo-wrapper .logo img {
+    margin: 0 auto;
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -434,17 +559,31 @@ ul {
     .container {
      max-width: 960px;
     }
+    .footer-top {
+        text-align: start;
+       }
+    .col-lg-7 {
+        width: 50%;
+    }
  }
 
  @media screen and (min-width: 1200px) {
     .container {
      max-width: 1140px;
     }
+    .row-content-main h1 {
+        font-size: 4.8rem;
+        line-height: 58px;
+    }
  }
 
  @media screen and (min-width: 1400px) {
     .container {
      max-width: 1320px;
+    }
+    .row-content-main h1 {
+        font-size: 7.4rem;
+        line-height: 88px;
     }
  }
 
