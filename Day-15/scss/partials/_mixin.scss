@@ -1,0 +1,30 @@
+@mixin line {
+    height: 2px;
+    width: 50px;
+    background: #8e1efc;
+    display: block;
+    margin: 25px auto 20px;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 55px;
+        left: 50%;
+        width: 150px;
+        height: 2px;
+        border-bottom: 2px dashed #8e1efc;
+        margin-left: -75px;
+    }
+}
+
+@mixin header {
+    position: relative;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+@mixin background-section {
+    background: linear-gradient(to left, #7a60ff, #cd9ffa);
+    padding: 100px 0px;
+    position: relative;
+}

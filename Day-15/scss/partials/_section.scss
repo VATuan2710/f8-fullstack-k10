@@ -1,0 +1,294 @@
+.about {
+    text-align: center;
+    margin: 50px;
+    .about-header {
+        @include header() ;
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            color: #818992;
+        }
+        .line {
+            @include line();
+        }
+    }
+    .about-content {
+        margin-top: 60px;
+        .item {
+            position: relative;
+            margin-bottom: 40px;
+            i {
+                display: block;
+                width: 135px;
+                height: 135px;
+                border-radius: 99px;
+                background: linear-gradient(to left, #7a60ff, #cd9ffa);
+                color: #fff;
+                font-size: 50px;
+                line-height: 135px;
+                margin: 0 auto;
+                font-size: 50px;
+            }
+            h3 {
+                margin-top: 20px;
+            }
+            p {
+                color: #818992;
+                max-width: 80%;
+                margin: 10px auto;
+            }
+        }
+        .about-btn {
+            margin-top: 40px;
+            a {
+                color: #8e1efc;
+                padding: 10px 40px;
+                border: 1px solid #8e1efc ;
+                border-radius: 10px;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+.feature {
+    text-align: center;
+    @include background-section();
+    .feature-header {
+        @include header();
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            color: #818992;
+        }
+        .line {
+            @include line();
+        }
+    }
+    .feature-content {
+        margin-top: 60px;
+
+        .right {
+            text-align: right;
+            .single-feature-txt {
+                margin-right: 30px;
+            }
+        }
+        .left {
+            text-align: left;
+            .single-feature-txt {
+                margin-left: 30px;
+            }
+        }
+
+        .single-feature {
+            display: flex;
+            justify-content: flex-start;
+            margin: 0 0 40px;
+            .single-feature-txt {
+                h3,p {
+                    color: #fff;
+                }
+            }
+            .single-feature-icon {
+                display: flex;
+                align-items: center;
+                i {
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid rgb(142, 30, 252);
+                    border-radius: 99px;
+                    color: rgb(142, 30, 252);
+                    line-height: 45px;
+                    text-align: center;
+                }
+            }
+        }
+        .feature-mobile {
+            padding: 30px 20px;
+            img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.member {
+    text-align: center;
+    padding: 60px 0;
+    .member-header {
+        @include header();
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            color: #818992;
+        }
+        .line {
+            @include line();
+        }
+    }
+    .member-content {
+        margin-top: 60px;
+        .member-detail {
+            img {
+                width: 70%;
+                border-radius: 999px;
+            }
+            h3 {
+                color: rgb(142, 30, 252);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.testimonials {
+    text-align: center;
+    @include background-section();
+    .testimonials-header {
+        @include header();
+        h2 {
+            font-size: 28px;
+            color: #fff;
+        }
+        p {
+            color: #fff;
+        }
+        .line {
+            @include line();
+        }
+    }
+    .testimonials-content {
+
+    }
+}
+
+.contact-us {
+    text-align: center;
+    padding: 60px 0;
+    .contact-header {
+        @include header();
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            color: #818992;
+        }
+        .line {
+            @include line();
+        }
+    }
+    .contact-content {
+        margin-top: 60px;
+        .contact-form {
+            text-align: start;
+            .col {
+                flex-basis: 0;
+                flex-grow: 1;
+                &:first-child {
+                    padding-right: 20px;
+                }
+            }
+            input {
+                width: 100%;
+                border: 1px solid #e4e4e4;
+                border-radius: 30px;
+                height: 40px;
+                padding: 0 10px;
+                margin-bottom: 10px;
+            }
+            textarea {
+                resize: none;
+                height: 150px;
+                width: 100%;
+                border: 1px solid #e4e4e4;
+                border-radius: 30px;
+                padding: 20px 10px;
+            }
+            .contact-btn {
+                margin-top: 20px;
+                width: 100%;
+                background: linear-gradient(to left, #7a60ff, #cd9ffa);
+                padding: 15px 20px;
+                border: 1px solid #e4e4e4;
+                border-radius: 30px;
+                color: #fff;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+
+        }
+        .contact-info {
+            background: linear-gradient(to left, #7a60ff, #cd9ffa);
+            border-radius: 10px;
+            text-align: start;
+            padding: 30px 30px 10px 30px;
+            height: 100%;
+            margin-left: 20px;
+            .contact-item {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                .contact-item-icon {
+                    font-size: 30px;
+                    color: #fff;
+                    margin-right: 20px;
+                }
+                .contact-item-txt {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.download {
+    text-align: center;
+    @include background-section();
+    .download-header {
+        @include header();
+        h2 {
+            font-size: 28px;
+            color: #fff;
+        }
+        p {
+            color: #fff;
+        }
+        .line {
+            @include line();
+        }
+    }
+    .download-content-btn {
+        margin: 60px 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img {
+            display: block;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .apple-btn {
+            display: block;
+            width: 150px;
+        }
+        .appstore-btn {
+            margin-left: 40px;
+            width: 150px;
+
+        }
+    }
+}
+
+.footer {
+    padding: 15px;
+    text-align: center;
+    a {
+        color: #5f0099;
+    }
+}
