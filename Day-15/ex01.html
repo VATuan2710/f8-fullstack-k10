@@ -477,5 +477,37 @@
       </div>
     </footer>
     <!-- end footer -->
+
+    <script>
+      const header = document.querySelector(".header");
+      const logo = document.querySelector(".navbar-logo");
+      const links = document.querySelectorAll(".navbar a");
+      const headerBoxIcon = document.querySelector(".header-box i");
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 0) {
+          header.style.backgroundColor = "white";
+          header.style.transition = "background-color 0.3s ease";
+          logo.src = "Images/logo-black.png";
+
+          links.forEach((link) => {
+            link.style.color = "#5f0099";
+            link.style.transition = "color 0.3s ease";
+          });
+
+          headerBoxIcon.style.color = "black";
+          headerBoxIcon.style.transition = "color 0.3s ease";
+        } else {
+          header.style.backgroundColor = "transparent";
+          logo.src = "Images/logo.png";
+
+          links.forEach((link) => {
+            link.style.color = "#fff";
+          });
+
+          headerBoxIcon.style.color = "#fff";
+        }
+      });
+    </script>
   </body>
 </html>

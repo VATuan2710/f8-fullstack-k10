@@ -445,7 +445,8 @@ ul li {
   left: 0;
   padding: 20px 0;
   z-index: 100;
-  background: gray;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 .header .navbar .container {
   display: flex;
@@ -981,7 +982,7 @@ ul li {
     display: none;
     width: 100%;
     text-align: center;
-    background-color: gray;
+    background-color: rgba(255, 250, 240, 0.644);
   }
   .header .navbar .container .menu ul {
     display: flex;
