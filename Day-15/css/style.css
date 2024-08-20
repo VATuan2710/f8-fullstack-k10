@@ -438,10 +438,14 @@ ul li {
   }
 }
 .header {
-  background: linear-gradient(to left, #7a60ff, #cd9ffa);
-}
-.header .navbar {
+  position: fixed;
+  width: 100%;
+  max-height: 50px;
+  top: 0;
+  left: 0;
   padding: 20px 0;
+  z-index: 100;
+  background: transparent;
 }
 .header .navbar .container {
   display: flex;
@@ -454,6 +458,10 @@ ul li {
 }
 .header .navbar .container .logo img {
   object-fit: contain;
+}
+.header .navbar .container .header-box i {
+  font-size: 30px;
+  color: #fff;
 }
 .header .navbar .container .menu ul {
   display: flex;
@@ -470,47 +478,49 @@ ul li {
   font-weight: 600;
   padding: 10px;
 }
-.header .banner {
+
+.banner {
+  background: linear-gradient(to left, #7a60ff, #cd9ffa);
   position: relative;
-  padding-bottom: 40px;
+  padding: 100px 0 40px;
 }
-.header .banner .banner-txt {
+.banner .banner-txt {
   margin-top: 40px;
   color: #fff;
   padding-right: 80px;
 }
-.header .banner .banner-txt h2 {
+.banner .banner-txt h2 {
   font-size: 35px;
   font-weight: 700;
 }
-.header .banner .banner-txt h3 {
+.banner .banner-txt h3 {
   margin-top: 10px;
   font-size: 20px;
   font-weight: 500;
 }
-.header .banner .banner-txt p {
+.banner .banner-txt p {
   margin-top: 30px;
 }
-.header .banner .banner-txt .download-btn {
+.banner .banner-txt .download-btn {
   margin-top: 40px;
   display: flex;
   flex-direction: row;
 }
-.header .banner .banner-txt .download-btn img {
+.banner .banner-txt .download-btn img {
   border-radius: 10px;
   width: 100%;
 }
-.header .banner .banner-txt .download-btn .apple-btn {
+.banner .banner-txt .download-btn .apple-btn {
   width: 150px;
 }
-.header .banner .banner-txt .download-btn .appstore-btn {
+.banner .banner-txt .download-btn .appstore-btn {
   margin-left: 40px;
   width: 150px;
 }
-.header .banner .iphone-banner {
+.banner .iphone-banner {
   max-width: 100%;
 }
-.header .banner .svg-wave {
+.banner .svg-wave {
   position: absolute;
   bottom: -4px;
   width: 100%;
@@ -907,17 +917,6 @@ ul li {
   color: #5f0099;
 }
 
-@media screen and (max-width: 768px) {
-  .feature .feature-content .feature-mobile {
-    display: none;
-  }
-  .member .member-content .member-detail {
-    margin-top: 30px;
-  }
-  .member .member-content .member-detail img {
-    width: 50%;
-  }
-}
 @media screen and (max-width: 991px) {
   .header .navbar .menu {
     display: none;
@@ -928,6 +927,17 @@ ul li {
   .contact-us .contact-content .contact-info {
     margin-left: 0;
     margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature .feature-content .feature-mobile {
+    display: none;
+  }
+  .member .member-content .member-detail {
+    margin-top: 30px;
+  }
+  .member .member-content .member-detail img {
+    width: 50%;
   }
 }
 @media screen and (min-width: 576px) {

@@ -1,26 +1,17 @@
 
-@media screen and (max-width: 768px) {
-    .feature {
-        .feature-content {
-            .feature-mobile {
-                display: none;
-            }
-        }
-    }
-
-    .member {
-        .member-content {
-            .member-detail {
-                margin-top: 30px;
-                img {
-                    width: 50%;
-                }
-            }
-        }
-    }
-}
-
-
+// @media screen and (max-width: 1199px) {
+//     .contact-us {
+//         .contact-content {
+//             .contact-info {
+//                 .contact-item {
+//                     p {
+                       
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media screen and (max-width: 991px) {
     .header {
@@ -41,6 +32,27 @@
             .contact-info {
                 margin-left: 0;
                 margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feature {
+        .feature-content {
+            .feature-mobile {
+                display: none;
+            }
+        }
+    }
+
+    .member {
+        .member-content {
+            .member-detail {
+                margin-top: 30px;
+                img {
+                    width: 50%;
+                }
             }
         }
     }
