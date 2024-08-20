@@ -14,16 +14,42 @@
 // }
 
 @media screen and (max-width: 991px) {
+    .container {
+        flex-wrap: wrap;
+    }
     .header {
         .navbar {
-            .menu {
-                display: none;
+            .container {
+                .header-box {
+                    display: block;
+                }
+                .menu {
+                    // padding: 10px 0;
+                    display: none;
+                    width: 100%;
+                    text-align: center;
+                    background-color: gray;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .header-box {
+                    padding-right: 10px;
+                }  
+                #navbar-checkbox {
+                    &:checked ~ .menu {
+                        display: block;
+                    }
+                }
+
             }
         }
-        .banner {
-            .iphone-banner {
-                margin-top: 20px;
-            }
+    }
+
+    .banner {
+        .iphone-banner {
+            margin-top: 20px;
         }
     }
 

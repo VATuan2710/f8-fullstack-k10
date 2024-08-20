@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Rajdhani, sans-serif;
 }
 
 a {
@@ -25,6 +28,8 @@ a {
     position: absolute;
     top: 15%;
     left: 10%;
+    text-align: center;
+    color: #fff;
 }
 
 .landing-info .logo {
@@ -38,12 +43,210 @@ a {
     height: 60px;
 }
 
+.landing-info h2 {
+    font-size: 20px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.landing-info h1 {
+    font-size: 104px;
+    font-family: Titillium Web, sans-serif;
+    font-size: 6.5rem;
+    font-weight: 900;
+    position: relative;
+    top: -30px;
+    text-transform: uppercase;
+}
+
+.landing-info p {
+    width: 65%;
+    margin: 0 auto;
+    position: relative;
+    top: -30px;
+}
+
+.landing-info .tab-switch {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.landing-info .tab-switch .tab-switch-btn {
+    width: 180px;
+    height: 54px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.landing-info .tab-switch .tab-switch-btn:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.landing-info .tab-switch .tab-switch-btn:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#login:checked ~ .landing-info .tab-switch .tab-switch-btn:first-child {
+    color: #3e3f5e;
+    background-color: #fff;
+}
+
+#register:checked ~ .landing-info .tab-switch .tab-switch-btn:last-child {
+    color: #3e3f5e;
+    background-color: #fff;
+}
+
+
 /* end landing info */
 
 .landing-form {
     width: 500px;
     height: 100%;
     position: absolute;
-    right: 5%;
-    top: 0;
+    right: 5%;  
+    top: 20%;
+}
+
+.landing-form .form-wrapper {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    transition: 0.6s ease-in-out;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.landing-form .form-wrapper .login-form {
+    padding: 70px 60px;
+    width: 484px;
+}
+
+.landing-form .form-wrapper .login-form .rocket-icon {
+    position: absolute;
+    top: -60px;
+    left: -40px;
+}
+
+.landing-form .form-wrapper .login-form h2 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.landing-form .form-wrapper .login-form .login-wrapper {
+    margin-top: 50px;
+}
+
+.landing-form .form-wrapper .input-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #3e3f5e;
+    position: relative;
+}
+
+.landing-form .form-wrapper .input-wrapper input {
+    height: 54px;
+    border-radius: 10px;
+    padding: 0 20px;
+    width: 100%;
+    border: 1px solid #dedeea;
+}
+
+.landing-form .form-wrapper .input-wrapper label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #adafca;
+}
+
+/* .landing-form .form-wrapper .login-form .login-wrapper .input-wrapper:focus ~ label {
+    background: #fff;
+    padding: 0 6px;
+    top: -10px;
+} */
+
+.option {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.btn {
+    margin-top: 15px;
+}
+
+.btn .btn-wrapper button {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    background-color: #615dfa;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #615dfa;
+    border-radius: 10px;
+}
+
+.login-form-txt {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-link {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-link a {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.social-link a:nth-of-type(1) {
+    background-color: #007bff;
+}
+.social-link a:nth-of-type(2) {
+    background-color: #007bff;
+}
+.social-link a:nth-of-type(3) {
+    background-color: #6f42c1;
+}
+.social-link a:nth-of-type(4) {
+    background-color: #dc3545;
+}
+
+.social-link a i {
+    color: #fff;
+}
+
+/* end login-form */
+
+/* register */
+
+.landing-form .form-wrapper .register-form {
+    padding: 70px 60px;
+    width: 484px;
 }

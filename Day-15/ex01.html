@@ -20,9 +20,10 @@
               <img src="Images/logo.png" alt="logo" class="navbar-logo" />
             </a>
           </div>
-          <div class="header-box">
+          <input type="checkbox" id="navbar-checkbox" hidden />
+          <label class="header-box" for="navbar-checkbox">
             <i class="fa-solid fa-bars"></i>
-          </div>
+          </label>
           <div class="menu">
             <ul>
               <li><a href="#">Home</a></li>
@@ -284,19 +285,52 @@
     <!-- testimonials -->
     <section class="testimonials">
       <div class="container">
-        <div class="testimonials-header">
-          <h2>Testimonials</h2>
-          <div class="line"></div>
-          <p>
-            Sed quis nisi nisi. Proin consectetur porttitor dui sit amet
-            viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra
-            ante.
-          </p>
-        </div>
-        <div class="testimonials-content">
-          <div class="row">
-            <div class="col-offset-md-2 col-md-8 col-sm-12">
-              <div class="box-wrapper">a</div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="testimonials-header">
+              <h2>Testimonials</h2>
+              <div class="line"></div>
+              <p>
+                Sed quis nisi nisi. Proin consectetur porttitor dui sit amet
+                viverra. Fusce sit amet lorem faucibus, vestibulum ante in,
+                pharetra ante.
+              </p>
+            </div>
+            <div class="testimonials-content">
+              <div class="testimonials-content-slider">
+                <div class="arrow-left">
+                  <a href="#" class="pre">
+                    <img src="Images/arrow-left.png" alt="arrow-left" />
+                  </a>
+                </div>
+                <div class="box-wrapper">
+                  <div class="box-view-port">
+                    <div class="slider">
+                      <div class="slider-item">
+                        <div class="slider-img">
+                          <img src="Images/user1.jpg" alt="" />
+                        </div>
+                        <div class="slider-txt">
+                          <span class="title">
+                            <h3>John Michal</h3>
+                            <span>Digital Designer</span>
+                          </span>
+                          <p>
+                            Consectetuer adipiscing elit, sed diam nonummy nibh
+                            euismod tincidunt ut laoreet dolore magna aliquam
+                            eratvo lutpat.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow-right">
+                  <a href="#" class="next">
+                    <img src="Images/arrow-right.png" alt="arrow-right" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

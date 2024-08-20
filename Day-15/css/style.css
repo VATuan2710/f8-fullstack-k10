@@ -459,6 +459,9 @@ ul li {
 .header .navbar .container .logo img {
   object-fit: contain;
 }
+.header .navbar .container .header-box {
+  display: none;
+}
 .header .navbar .container .header-box i {
   font-size: 30px;
   color: #fff;
@@ -758,6 +761,53 @@ ul li {
   border-bottom: 2px dashed #8e1efc;
   margin-left: -75px;
 }
+.testimonials .testimonials-content {
+  margin-top: 30px;
+}
+.testimonials .testimonials-content .testimonials-content-slider {
+  display: flex;
+  margin: 0 auto;
+}
+.testimonials .testimonials-content .testimonials-content-slider .box-wrapper {
+  width: 70%;
+  display: flex;
+}
+.testimonials .testimonials-content .testimonials-content-slider .box-wrapper .box-view-port {
+  border: none;
+  background: rgba(255, 255, 255, 0.81);
+  padding: 30px;
+  height: 180px;
+}
+.testimonials .testimonials-content .testimonials-content-slider .box-wrapper .box-view-port .slider .slider-item {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+}
+.testimonials .testimonials-content .testimonials-content-slider .box-wrapper .box-view-port .slider .slider-item .slider-img img {
+  border: 12px solid #fff;
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
+}
+.testimonials .testimonials-content .testimonials-content-slider .box-wrapper .box-view-port .slider .slider-item .slider-txt {
+  line-height: 1.25;
+  margin-left: 20px;
+  color: #212529;
+}
+.testimonials .testimonials-content .testimonials-content-slider .box-wrapper .box-view-port .slider .slider-item .slider-txt .title h3 {
+  font-size: 23px;
+  font-weight: 800;
+}
+.testimonials .testimonials-content .testimonials-content-slider .box-wrapper .box-view-port .slider .slider-item .slider-txt p {
+  margin-top: 20px;
+}
+.testimonials .testimonials-content .testimonials-content-slider .arrow-left {
+  margin: 75px 20px 0;
+}
+.testimonials .testimonials-content .testimonials-content-slider .arrow-right {
+  margin: 75px 20px 0;
+}
+
 .contact-us {
   text-align: center;
   padding: 60px 0;
@@ -918,10 +968,29 @@ ul li {
 }
 
 @media screen and (max-width: 991px) {
-  .header .navbar .menu {
-    display: none;
+  .container {
+    flex-wrap: wrap;
   }
-  .header .banner .iphone-banner {
+  .header .navbar .container .header-box {
+    display: block;
+  }
+  .header .navbar .container .menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+  }
+  .header .navbar .container .menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .navbar .container .header-box {
+    padding-right: 10px;
+  }
+  .header .navbar .container #navbar-checkbox:checked ~ .menu {
+    display: block;
+  }
+  .banner .iphone-banner {
     margin-top: 20px;
   }
   .contact-us .contact-content .contact-info {

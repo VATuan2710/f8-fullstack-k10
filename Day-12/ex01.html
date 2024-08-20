@@ -6,6 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/ex01.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="landing">
@@ -36,42 +40,105 @@
           The next generation social network & community! Connect with your
           friends and play with our quests and badges gamification system!
         </p>
-        <div class="btn-switch">
-          <label for="login">Login</label>
-          <label for="register">Register</label>
+        <div class="tab-switch">
+          <label for="login" class="tab-switch-btn">
+            <div class="active">Login</div></label
+          >
+          <label for="register" class="tab-switch-btn">
+            <div>Register</div>
+          </label>
         </div>
       </div>
       <!-- end landing-info -->
       <div class="landing-form">
-        <form class="login-form">
-          <div class="rocket-icon">
-            <img src="Images/rocket.webp" alt="" />
-          </div>
-          <h2>Login</h2>
-          <div class="login-wrapper">
-            <div class="input-wrapper">
-              <input type="text" name="name" id="name" />
-              <label for="name"> Username or email </label>
+        <!-- <div class="form-wrapper">
+          <form class="login-form">
+            <div class="rocket-icon">
+              <img src="Images/rocket.webp" alt="" />
             </div>
-            <div class="input-wrapper">
-              <input type="password" name="password" id="password" />
-              <label for="password"> Password </label>
-            </div>
-            <div class="option">
-              <div class="checkbox-wrapper">
-                <input type="checkbox" id="remember" />
-                <label for="remember">Remember me</label>
+            <h2>Login</h2>
+            <div class="login-wrapper">
+              <div class="input-wrapper">
+                <input type="text" name="name" id="name" />
+                <label for="name"> Username or email </label>
               </div>
-              <div class="forgot"><a href="#"></a></div>
-            </div>
-            <div class="btn">
-              <div class="btn-wrapper">
-                <button>Login to your account</button>
+              <div class="input-wrapper">
+                <input type="password" name="password" id="password" />
+                <label for="password"> Password </label>
+              </div>
+              <div class="option">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="remember" hidden />
+                  <label for="remember">Remember me</label>
+                </div>
+                <div class="forgot"><a href="#">Forgot password ?</a></div>
+              </div>
+              <div class="btn">
+                <div class="btn-wrapper">
+                  <button>Login to your account</button>
+                </div>
               </div>
             </div>
-          </div>
-        </form>
-        <form class="register-form">form b</form>
+            <div class="login-form-txt">
+              <p>Login with your social Account</p>
+            </div>
+            <div class="social-link">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-twitch"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </form>
+        </div> -->
+        <!-- end login form -->
+        <div class="form-wrapper">
+          <form class="register-form">
+            <div class="rocket-icon">
+              <img src="Images/rocket.webp" alt="" />
+            </div>
+            <h2>Create your Account</h2>
+            <div class="login-wrapper">
+              <div class="input-wrapper">
+                <input type="email" name="email-register" id="email-register" />
+                <label for="email-register"> Your Email </label>
+              </div>
+              <div class="input-wrapper">
+                <input type="text" name="name-register" id="name-register" />
+                <label for="name-register"> Username </label>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  name="password-register"
+                  id="password-register"
+                />
+                <label for="password-register"> Password </label>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  name="password-register-repeat"
+                  id="password-register-repeat"
+                />
+                <label for="password-register-repeat"> Password </label>
+              </div>
+              <div class="option">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="register-news" hidden />
+                  <label for="register-news">
+                    Send me news and updates via email
+                  </label>
+                </div>
+              </div>
+              <div class="btn">
+                <div class="btn-wrapper">
+                  <button>Login to your account</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- end register form -->
       </div>
     </div>
   </body>
