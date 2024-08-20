@@ -1,22 +1,17 @@
 
-// @media screen and (max-width: 1199px) {
-//     .contact-us {
-//         .contact-content {
-//             .contact-info {
-//                 .contact-item {
-//                     p {
-                       
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
 @media screen and (max-width: 991px) {
     .container {
         flex-wrap: wrap;
     }
+
+    #navbar-checkbox {
+        &:checked ~ .header .navbar .container {
+            .menu {
+                display: block;
+            }
+        }
+    }
+
     .header {
         .navbar {
             .container {
@@ -24,7 +19,6 @@
                     display: block;
                 }
                 .menu {
-                    // padding: 10px 0;
                     display: none;
                     width: 100%;
                     text-align: center;
@@ -37,11 +31,6 @@
                 .header-box {
                     padding-right: 10px;
                 }  
-                #navbar-checkbox {
-                    &:checked ~ .menu {
-                        display: block;
-                    }
-                }
 
             }
         }
@@ -63,7 +52,17 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .about {
+        .about-header {
+            max-width: 100%;
+        }
+    }
+
     .feature {
+        .feature-header {
+            max-width: 100%;
+        }
         .feature-content {
             .feature-mobile {
                 display: none;
@@ -72,6 +71,9 @@
     }
 
     .member {
+        .member-header {
+            max-width: 100%;
+        }
         .member-content {
             .member-detail {
                 margin-top: 30px;
