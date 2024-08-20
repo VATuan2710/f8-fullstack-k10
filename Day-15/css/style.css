@@ -982,7 +982,7 @@ ul li {
     display: none;
     width: 100%;
     text-align: center;
-    background-color: rgba(255, 250, 240, 0.644);
+    background-color: #d5c6dd;
   }
   .header .navbar .container .menu ul {
     display: flex;
