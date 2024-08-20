@@ -213,54 +213,52 @@
     }
     .testimonials-content {
         margin-top: 30px;
-        .testimonials-content-slider {
+        display: flex;
+        .box-wrapper {
+            width: 70%;
             display: flex;
+            flex-direction: row;
+            border: none ;
+            background: rgba(255, 255, 255, 0.81) ;
+            padding: 30px;
+            height: auto;
             margin: 0 auto;
-            .box-wrapper {
-                width: 70%;
+            border-radius: 10px;
+            .slider {
                 display: flex;
-                .box-view-port {
-                    border: none ;
-                    background: rgba(255, 255, 255, 0.81) ;
-                    padding: 30px;
-                    height: 180px;
-                    .slider {
-                        .slider-item {
-                            display: flex;
-                            flex-direction: row;
-                            text-align: start;
-                            .slider-img {
-                                img {
-                                    border: 12px solid #fff;
-                                    width: 130px;
-                                    height: 130px;
-                                    border-radius: 999px;
-                                }
+                flex-direction: row;
+                .slider-item {
+                    display: flex;
+                    flex-direction: row;
+                    text-align: start;
+                    .slider-img {
+                        img {
+                            border: 12px solid #fff;
+                            border-radius: 999px;
+                        }
+                    }
+                    .slider-txt {
+                        line-height: 1.25;
+                        margin-left: 20px;
+                        color: #212529;
+                        .title {
+                            h3 {
+                                font-size: 23px;
+                                font-weight: 800;
                             }
-                            .slider-txt {
-                                line-height: 1.25;
-                                margin-left: 20px;
-                                color: #212529;
-                                .title {
-                                    h3 {
-                                        font-size: 23px;
-                                        font-weight: 800;
-                                    }
-                                }
-                                p {
-                                    margin-top: 20px;
-                                }
-                            }
+                        }
+                        p {
+                            margin-top: 20px;
                         }
                     }
                 }
             }
-            .arrow-left {
-                margin: 75px 20px 0;
-            }
-            .arrow-right {
-                margin: 75px 20px 0;
-            }
+        }
+        .arrow-left {
+            margin: auto 0;
+        }
+        .arrow-right {
+            margin: auto 0;
         }
             
     }

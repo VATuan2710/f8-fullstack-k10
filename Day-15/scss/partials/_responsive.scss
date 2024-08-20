@@ -52,7 +52,6 @@
             margin-top: 20px;
         }
     }
-
     .contact-us {
         .contact-content {
             .contact-info {
@@ -80,6 +79,34 @@
                     width: 50%;
                 }
             }
+        }
+    }
+
+    .testimonials {
+        .testimonials-header {
+            max-width: 100%;
+        }
+        .testimonials-content {
+            .arrow-left, .arrow-right {
+                display: none;
+            }
+            .box-wrapper {
+                width: 100%;
+                .slider {
+                    .slider-item {
+                        text-align: center;
+                        flex-direction: column;
+                        .slider-img {
+                            img {
+                               width: 200px;
+                               height: 200px;
+                            }
+                        }
+                    }
+                }
+            
+        }
+
         }
     }
 }
