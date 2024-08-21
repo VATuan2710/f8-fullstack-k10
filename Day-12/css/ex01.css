@@ -243,9 +243,15 @@ a {
     width: 484px;
 }
 
+@media screen and (min-width: 480px ){
+    .container {
+        margin-top: 10vh;
+    }
+}
+
 @media screen and (min-width: 1199px ){
     .container {
-        margin-top: 200px;
+        margin-top: 20vh;
     }
 }
 
