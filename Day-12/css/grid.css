@@ -33,6 +33,10 @@
     outline: 0;
 }
 
+body {
+    overflow: scroll;
+}
+
 :root {
     --container-width: 100%;
     --column--space: 20px;
@@ -43,6 +47,7 @@
     max-width: var(--container-width);
     margin: 0 auto;
     /* padding: 0 var(--container-padding); */
+
 }
 
 .row {
