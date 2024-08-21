@@ -12,6 +12,7 @@ a {
     color: #333;
 }
 
+
 .landing {
     background-image: url("../Images/landing-background.jpg");
     background-repeat: no-repeat;
@@ -24,10 +25,10 @@ a {
 }
 
 .landing-info {
-    width: 580px;
-    position: absolute;
+    /* width: 580px; */
+    /* position: absolute;
     top: 15%;
-    left: 10%;
+    left: 10%; */
     text-align: center;
     color: #fff;
 }
@@ -63,13 +64,11 @@ a {
 .landing-info p {
     width: 65%;
     margin: 0 auto;
-    position: relative;
-    top: -30px;
 }
 
 .landing-info .tab-switch {
     width: 65%;
-    margin: 0 auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     gap: 0;
@@ -98,12 +97,12 @@ a {
     border-bottom-right-radius: 10px;
 }
 
-#login:checked ~ .landing-info .tab-switch .tab-switch-btn:first-child {
+#login:checked ~ .container .landing-info .tab-switch .tab-switch-btn:first-child {
     color: #3e3f5e;
     background-color: #fff;
 }
 
-#register:checked ~ .landing-info .tab-switch .tab-switch-btn:last-child {
+#register:checked ~ .container .landing-info .tab-switch .tab-switch-btn:last-child {
     color: #3e3f5e;
     background-color: #fff;
 }
@@ -114,22 +113,15 @@ a {
 .landing-form {
     width: 500px;
     height: 100%;
-    position: absolute;
-    right: 5%;  
-    top: 20%;
+    margin: 0 auto;
 }
 
 .landing-form .form-wrapper {
-    transform: translate(0px, 0px);
-    opacity: 1;
-    visibility: visible;
-    z-index: 1;
-    position: absolute;
-    left: 0px;
-    transition: 0.6s ease-in-out;
+    position: relative;
     display: block;
     background-color: #fff;
     border-radius: 10px;
+    z-index: 10;
 }
 
 .landing-form .form-wrapper .login-form {
@@ -250,3 +242,24 @@ a {
     padding: 70px 60px;
     width: 484px;
 }
+
+@media screen and (min-width: 1199px ){
+    .container {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (min-width: 1499px ){
+    .landing-decoration {
+        width: 64%;
+        height: 140%;
+        border-radius: 50%;
+        background: url(../Images/dot-texture.png) repeat 0 0 #fff;
+        position: absolute;
+        top: -20%;
+        right: -32%;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+

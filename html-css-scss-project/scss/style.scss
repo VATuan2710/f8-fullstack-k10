@@ -1,0 +1,12 @@
+//Import grobal
+@use "partials/reset";
+@use "partials/fonts";
+@use "partials/base";
+
+
+// Import layout
+@use "partials/header";
+@use "partials/footer";
+
+// Import page
+@use "pages/home"

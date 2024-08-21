@@ -1,0 +1,136 @@
+header {
+    background: var(--White, #FFF);
+    box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+    .container {
+        .row {
+            display: flex;
+            align-items: center;
+            // .logo {
+            //     display: block;
+            // }
+            .navbar {
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    gap: 50px;
+                    li {
+                        position: relative;
+                        padding: 20px 0;
+                        .num {
+                            position: absolute;
+                            top: 12px ;
+                            left: 14.5px;
+                            font-size: 10px;
+                            color: #fff;
+                            // text-align: center;
+                            z-index: 10;
+                        }
+                        .header-cart {
+                            position: relative;
+                            &::after {
+                                content: "";
+                                background-color: #E05000;
+                                position: absolute;
+                                width: 13.333px;
+                                height: 13.333px;
+                                border-radius: 99px;
+                                top: -10px;
+                                left: 10px;
+                            }
+                            i {
+                                width: 23.333px;
+                                height: 23.333px; 
+                            }
+                        }
+                        a {
+                            display: flex;
+                        }
+
+                    }
+                    .header-active {
+                        border-bottom: 1px solid #46B20F;
+                        a {
+                            color: #46B20F;
+                        }
+                    }
+                }
+        
+            }
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width: 991px) {
+    #bar-check {
+        &:checked ~ header .container  {
+            .navbar {
+                display: block;
+            }
+           
+        }
+    }
+
+    header {
+        .container {
+            .row {
+                .navbar {
+                    display: none;
+                    width: 100%;
+                    text-align: center;
+                    background-color: #d5c6dd;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 0;
+                        li {
+                            text-align: center;
+                            .num {
+                                top: 11px;
+                                left: 16.5px;
+                            }
+                            .header-cart {
+                                &::after {
+                                    content: "";
+                                    background-color: #E05000;
+                                    position: absolute;
+                                    border-radius: 99px;
+                                    top: -10px;
+                                    left: 12px;
+                                }
+                                i {
+                                    width: 23.333px;
+                                    height: 23.333px; 
+                                }
+                            }
+                        }
+
+                    }
+                }
+                .bar {
+                    font-size: 2.2rem;
+                    margin-left: auto;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 991px) {
+    header {
+        .container {
+            .row {
+                .bar {
+                    display: none;
+                }
+            }
+        }
+    }
+}

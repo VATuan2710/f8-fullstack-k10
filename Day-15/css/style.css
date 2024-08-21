@@ -849,7 +849,6 @@ ul li {
   text-align: start;
 }
 .contact-us .contact-content .contact-form .col {
-  flex-basis: 0;
   flex-grow: 1;
 }
 .contact-us .contact-content .contact-form .col:first-child {

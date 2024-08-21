@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    writing-mode: vertical-rl;
+    /* transform: rotate(360deg);  */
+    /* white-space: nowrap; */
+}
+
+.form {
+    width: 800px;
+    height: auto;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #e4e4e4;
+    border-radius: 30px;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.col {
+    flex-grow: 1;
+}
+
+.col:first-child {
+    padding-right: 40px;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+    width: 100%;
+    border: 1px solid #e4e4e4;
+    border-radius: 30px;
+    padding: 20px 10px;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+}
