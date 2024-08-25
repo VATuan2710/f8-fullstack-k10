@@ -1,6 +1,7 @@
 // file này chứa phần định nghĩa mixin
 @mixin header {
     font-family: Inter;
+    text-align: center;
     font-size: 31.667px;
     font-weight: 800;
     line-height: 41.649px;
@@ -8,6 +9,8 @@
 
 @mixin content {
     font-family: Inter;
+    color: var(--Content, #2C2C2C);
+    text-align: center;
     font-size: 16px;
     font-weight: 400;
     line-height: 20.417px;

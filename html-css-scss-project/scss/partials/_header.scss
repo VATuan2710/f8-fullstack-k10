@@ -5,9 +5,6 @@ header {
         .row {
             display: flex;
             align-items: center;
-            // .logo {
-            //     display: block;
-            // }
             .navbar {
                 ul {
                     display: flex;
@@ -19,11 +16,10 @@ header {
                         padding: 20px 0;
                         .num {
                             position: absolute;
-                            top: 12px ;
-                            left: 14.5px;
+                            top: 11px ;
+                            left: 14px;
                             font-size: 10px;
                             color: #fff;
-                            // text-align: center;
                             z-index: 10;
                         }
                         .header-cart {
@@ -45,6 +41,12 @@ header {
                         }
                         a {
                             display: flex;
+                        }
+                        &:hover {
+                            border-bottom: 1px solid #46B20F;
+                            a {
+                                color: #46B20F;
+                            }
                         }
 
                     }
@@ -68,9 +70,9 @@ header {
     #bar-check {
         &:checked ~ header .container  {
             .navbar {
-                display: block;
-            }
-           
+                max-height: 500px; 
+                opacity: 1; 
+            } 
         }
     }
 
@@ -78,10 +80,13 @@ header {
         .container {
             .row {
                 .navbar {
-                    display: none;
-                    width: 100%;
+                    display: block;
+                    max-height: 0; 
+                    overflow: hidden;
+                    transition: max-height 0.5s ease, opacity 0.5s ease;
+                    opacity: 0;
                     text-align: center;
-                    background-color: #d5c6dd;
+                    background-color: #C5FFA8;
                     ul {
                         display: flex;
                         flex-direction: column;
@@ -91,7 +96,7 @@ header {
                             text-align: center;
                             .num {
                                 top: 11px;
-                                left: 16.5px;
+                                left: 16px;
                             }
                             .header-cart {
                                 &::after {
