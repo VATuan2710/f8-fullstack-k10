@@ -1,1 +1,14 @@
 // chứa các class thường xuyên dùng trong css
+@use "./reset";
+
+.m-0 {
+    margin: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.center {
+    justify-content: center;
+}

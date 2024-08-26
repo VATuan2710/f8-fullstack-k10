@@ -1,11 +1,17 @@
 header {
     background: var(--White, #FFF);
     box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+    .logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
     .container {
         .row {
             display: flex;
             align-items: center;
             .navbar {
+
                 ul {
                     display: flex;
                     flex-direction: row;
@@ -13,10 +19,9 @@ header {
                     gap: 50px;
                     li {
                         position: relative;
-                        padding: 20px 0;
                         .num {
                             position: absolute;
-                            top: 11px ;
+                            top: 25px ;
                             left: 14px;
                             font-size: 10px;
                             color: #fff;
@@ -31,7 +36,7 @@ header {
                                 width: 13.333px;
                                 height: 13.333px;
                                 border-radius: 99px;
-                                top: -10px;
+                                top: 25px;
                                 left: 10px;
                             }
                             i {
@@ -41,12 +46,10 @@ header {
                         }
                         a {
                             display: flex;
+                            padding: 35px 0;
                         }
                         &:hover {
                             border-bottom: 1px solid #46B20F;
-                            a {
-                                color: #46B20F;
-                            }
                         }
 
                     }
@@ -95,7 +98,7 @@ header {
                         li {
                             text-align: center;
                             .num {
-                                top: 11px;
+                                top: 25px;
                                 left: 16px;
                             }
                             .header-cart {
@@ -104,7 +107,7 @@ header {
                                     background-color: #E05000;
                                     position: absolute;
                                     border-radius: 99px;
-                                    top: -10px;
+                                    top: 25px;
                                     left: 12px;
                                 }
                                 i {
@@ -119,6 +122,7 @@ header {
                 .bar {
                     font-size: 2.2rem;
                     margin-left: auto;
+                    padding-right: 30px ;
                 }
 
             }

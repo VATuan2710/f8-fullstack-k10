@@ -26,6 +26,12 @@
     Note: từ màn hình sm trở lên phải thêm offset-0  
 
 */
+:root {
+  --container-width: 95%;
+  --column--space: 20px;
+  --container-padding: 15px ;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,15 +41,14 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 calc(-1 * var(20px) / 2);
-  /* gap: calc(var(--column--space)/2) ; */
+  margin: 0 calc(-1 * var(--column--space) / 2);
 }
 
 [class^=col-] {
   flex-basis: calc(8.3333333333% * var(--col-size));
   max-width: calc(8.3333333333% * var(--col-size));
-  padding: 0 calc(var(20px) / 2);
-  margin-bottom: calc(var 10px);
+  padding: 0 calc(var(--column--space) / 2);
+  margin-bottom: var(--column--space);
   /* gap: 20px */
 }
 

@@ -1,15 +1,73 @@
+@use "./variable";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Inter; 
+    outline: 0;
+    border: 0;
 }
 
-ul li {
+body {
+    overflow-x: hidden;
+    font-family: Inter, sans-serif;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul,ol {
     list-style: none;
 }
 
 a {
     text-decoration: none;
-    color: #2C2C2C;
+    color: variable.$textColor;
+    &:hover {
+      color: variable.$primaryColor;
+    }
+}
+
+h2 {
+  color: variable.$textColor;
+  font-size: 36.667px;
+  font-weight: 800;
+  line-height: 48.225px;
+}
+
+h3 {
+  color: variable.$textColor;
+  font-size: 31.667px;
+  font-weight: 800;
+  line-height: 41.649px;
+}
+
+h4 {
+  color: variable.$textColor;
+  font-size:  23.333px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h5 {
+  color: variable.$textColor;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26.667px;
+}
+
+h6 {
+  color: variable.$textColor;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26.667px;
+}
+
+p {
+  color: variable.$textColor;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.417px;
 }

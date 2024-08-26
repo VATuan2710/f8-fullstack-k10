@@ -26,15 +26,15 @@
 
 */
 
-// :root {
-//     --container-width: 95%;
-//     --column--space: 20px;
-//     --container-padding: 15px
-// }
+:root {
+    --container-width: 95%;
+    --column--space: 20px;
+    --container-padding: 15px
+}
 
 // $container-width: 95%;
 // $containerPadding: 30px;
-$columnSpace: 20px;
+
 
 .container {
     max-width: 1200px;
@@ -45,15 +45,14 @@ $columnSpace: 20px;
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 calc(-1*var($columnSpace)/2); 
-    /* gap: calc(var(--column--space)/2) ; */
+    margin: 0 calc(-1*var(--column--space)/2); 
 }
 
 [class^="col-"] {
     flex-basis:  calc(100% / 12* var(--col-size));
     max-width: calc(100% / 12* var(--col-size)) ;
-    padding: 0 calc(var( $columnSpace ) /2 );
-    margin-bottom: calc( var ( $columnSpace ) /2);
+    padding: 0 calc(var(--column--space) / 2);
+    margin-bottom: var(--column--space);
     /* gap: 20px */
 }
 
