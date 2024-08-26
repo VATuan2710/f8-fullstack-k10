@@ -68,6 +68,19 @@ header {
 
 }
 
+@media screen and (max-width: 1199px) {
+    header {
+        .container {
+            .row {
+                .navbar {
+                    padding-right: 30px ;            
+                }
+            }
+    
+        }
+    
+    }
+}
 
 @media screen and (max-width: 991px) {
     #bar-check {
