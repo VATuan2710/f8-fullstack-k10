@@ -1,3 +1,5 @@
+@use "./variable";
+@use "./base";
 header {
     background: var(--White, #FFF);
     box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
@@ -52,14 +54,14 @@ header {
                             padding: 35px 0;
                         }
                         &:hover {
-                            border-bottom: 1px solid #46B20F;
+                            border-bottom: 1px solid variable.$primaryColor;
                         }
 
                     }
                     .header-active {
-                        border-bottom: 1px solid #46B20F;
+                        border-bottom: 1px solid variable.$primaryColor;
                         a {
-                            color: #46B20F;
+                            color: variable.$primaryColor;
                         }
                     }
                 }
