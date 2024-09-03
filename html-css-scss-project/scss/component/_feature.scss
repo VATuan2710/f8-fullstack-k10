@@ -1,0 +1,21 @@
+@use "../partials/variable";
+.feature {
+    margin-top: 100px;
+    .feature-item {
+        display: flex;
+        .feature-image {
+            img {
+                width: 55.833px;
+                height: 55.833px;
+            }
+        }
+        .feature-content {
+            margin-left: 15.83px;
+            p {
+                margin-top: 6.67px;
+                max-width: 84%;
+            }
+        }
+    }
+
+}

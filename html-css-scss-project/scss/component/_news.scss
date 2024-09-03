@@ -1,0 +1,48 @@
+@use "../partials/variable";
+.news {
+    margin-top: 100px;
+    .header {
+        text-align: center;
+        p {
+            max-width: 57%;
+            margin: 23px auto;
+        }
+    }
+    .news-content {
+        .news-item {
+            .image {
+                img {
+                    width: 100%;
+                }
+            }
+            .sub-img-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 16.27px 0;
+                .news-img-info-txt {
+                    color: variable.$primaryColor
+                }
+                .news-img-info-date {
+                    color: #A3A3A3;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .news-wrapper-btn {
+        margin: 79.67px auto;
+        .news-btn {
+            display: flex;
+            margin: 0 auto;
+            padding: 11.667px 21.667px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid variable.$primaryColor;
+            border-radius: 10px;
+            width: fit-content;
+        }
+    }
+}
