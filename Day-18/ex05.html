@@ -8,25 +8,36 @@
   <body>
     <h1>Bài 5</h1>
     <script>
+      // let array = [a, b, c];
+      // Ham sap xep noi bot
+      // function bubbleSort(arr) {
+      //   let n = arr.length;
+      //   for (let i = 0; i < n - 1; i++) {
+      //     for (let j = 0; j < n - 1; j++) {
+      //       if (arr[j] > arr[j + 1]) {
+      //         let temp = arr[j];
+      //         arr[j] = arr[j + 1];
+      //         arr[j + 1] = temp;
+      //       }
+      //     }
+      //   }
+      //   return arr;
+      // }
+      // console.log(bubbleSort(array));
       let a = 4,
         b = 2,
-        c = 5;
-      let array = [a, b, c];
-      // Ham sap xep noi bot
-      function bubbleSort(arr) {
-        let n = arr.length;
-        for (let i = 0; i < n - 1; i++) {
-          for (let j = 0; j < n - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-              let temp = arr[j];
-              arr[j] = arr[j + 1];
-              arr[j + 1] = temp;
-            }
-          }
-        }
-        return arr;
+        c = 1;
+      let arr = [a, b, c];
+      if (arr[1] < arr[0]) {
+        let temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+      } else if (arr[2] < arr[1]) {
+        let temp = arr[1];
+        arr[1] = arr[2];
+        arr[2] = temp;
       }
-      console.log(bubbleSort(array));
+      console.log(arr);
     </script>
   </body>
 </html>

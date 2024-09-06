@@ -767,7 +767,7 @@ header .container .row .navbar ul .header-active a {
   }
   .banner .container .banner-content {
     position: relative;
-    z-index: 100;
+    z-index: 2;
     text-align: center;
   }
   .about .container .about-content .first-circle::before {

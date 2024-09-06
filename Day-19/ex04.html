@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let primeNum = prompt("Nhập vào số cần kiểm tra");
+      function solve(n) {
+        if (n <= 1) return false;
+        for (let i = 2; i < Math.sqrt(n); i++) if (n % i == 0) return false;
+        return true;
+      }
+      let check = solve(primeNum);
+      if (check) alert("Là số nguyên tố");
+      else alert("Không là số nguyên tố");
+    </script>
+  </body>
+</html>

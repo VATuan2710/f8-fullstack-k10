@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let kmNum = prompt("Nhập số km");
+      function taxiFare(kmNum) {
+        if (kmNum <= 1) console.log("Tiền cước là " + kmNum * 15000 + "đ");
+        else if (kmNum > 120) {
+          let fareAfterReduce = kmNum * 11000 - kmNum * 11000 * 0.1;
+          console.log("Tiền cước là " + fareAfterReduce + "đ");
+        } else if (kmNum > 5)
+          console.log("Tiền cước là " + kmNum * 11000 + "đ");
+        else console.log("Tiền cước là " + kmNum * 13500 + "đ");
+      }
+      taxiFare(kmNum);
+    </script>
+  </body>
+</html>

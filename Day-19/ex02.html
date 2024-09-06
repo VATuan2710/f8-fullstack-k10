@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let kwhNum = prompt("Nhập số điện hàng tháng");
+      function eleBill(kwhNum) {
+        if (kwhNum <= 50) alert("số tiền là phải đóng: " + kwhNum * 1.678);
+        else if (kwhNum >= 51 && kwhNum <= 100)
+          alert("số tiền là phải đóng: " + kwhNum * 1.734);
+        else if (kwhNum >= 101 && kwhNum <= 200)
+          alert("số tiền là phải đóng: " + kwhNum * 2.014);
+        else if (kwhNum >= 201 && kwhNum <= 300)
+          alert("số tiền là phải đóng: " + kwhNum * 2.536);
+        else if (kwhNum >= 301 && kwhNum <= 400)
+          alert("số tiền là phải đóng: " + kwhNum * 2.834);
+        else alert(kwhNum * 2.927);
+      }
+      eleBill(kwhNum);
+    </script>
+  </body>
+</html>
