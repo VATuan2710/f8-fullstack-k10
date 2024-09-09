@@ -8,17 +8,38 @@
   <body>
     <script>
       let kwhNum = prompt("Nhập số điện hàng tháng");
-      function eleBill(kwhNum) {
-        if (kwhNum <= 50) alert("số tiền là phải đóng: " + kwhNum * 1.678);
-        else if (kwhNum >= 51 && kwhNum <= 100)
-          alert("số tiền là phải đóng: " + kwhNum * 1.734);
-        else if (kwhNum >= 101 && kwhNum <= 200)
-          alert("số tiền là phải đóng: " + kwhNum * 2.014);
-        else if (kwhNum >= 201 && kwhNum <= 300)
-          alert("số tiền là phải đóng: " + kwhNum * 2.536);
-        else if (kwhNum >= 301 && kwhNum <= 400)
-          alert("số tiền là phải đóng: " + kwhNum * 2.834);
-        else alert(kwhNum * 2.927);
+      function eleBill(kWh) {
+        let totalPrice = 0;
+        if (kWh > 0) {
+          if (kWh <= 50) {
+            totalPrice = kWh * 1678;
+          } else if (51 <= kWh <= 100) {
+            kWh -= 50;
+            totalPrice = 50 * 1678 + kWh * 1734;
+          } else if (101 <= kWh <= 200) {
+            kWh -= 100;
+            totalPrice = 50 * 1678 + 50 * 1734 + kWh * 2014;
+          } else if (201 <= kWh <= 300) {
+            kWh -= 200;
+            totalPrice = 50 * 1678 + 50 * 1734 + 100 * 2014 + kWh * 2536;
+          } else if (301 <= kWh <= 400) {
+            kWh -= 300;
+            totalPrice =
+              50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + kWh * 2834;
+          } else {
+            kWh -= 400;
+            totalPrice =
+              50 * 1678 +
+              50 * 1734 +
+              100 * 2014 +
+              100 * 2536 +
+              100 * 2834 +
+              kWh * 2972;
+          }
+          alert(`Số tiền điện phải trả cho ${kWh}kWh là ${totalPrice} vnd`);
+        } else {
+          alert(`Nhap lai số kwh là số nguyên dương`);
+        }
       }
       eleBill(kwhNum);
     </script>
