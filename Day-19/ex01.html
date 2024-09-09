@@ -7,16 +7,31 @@
   </head>
   <body>
     <script>
+      // const kmNum = 130;
       let kmNum = prompt("Nhập số km");
+      kmNum = parseFloat(kmNum);
+      let total,
+        discount = 0.1;
       function taxiFare(kmNum) {
-        if (kmNum <= 1) console.log("Tiền cước là " + kmNum * 15000 + "đ");
-        else if (kmNum > 120) {
-          let fareAfterReduce = kmNum * 11000 - kmNum * 11000 * 0.1;
-          console.log("Tiền cước là " + fareAfterReduce + "đ");
-        } else if (kmNum > 5)
-          console.log("Tiền cước là " + kmNum * 11000 + "đ");
-        else console.log("Tiền cước là " + kmNum * 13500 + "đ");
+        if (typeof kmNum === "number" && !Number.isNaN(kmNum) && kmNum > 0) {
+          if (kmNum <= 1) {
+            total = kmNum * 15000;
+          } else if (kmNum <= 5) {
+            total = 15000 + (kmNum - 1) * 13500;
+          } else {
+            total = 15000 + 4 * 13500 + (kmNum - 5) * 11000;
+          }
+
+          if (kmNum > 120) {
+            total = total - total * discount;
+          }
+
+          alert(`Số tiền ứng là ${total} vnd`);
+        } else {
+          alert("Nhập lại số km dạng số và lớn hơn 0");
+        }
       }
+
       taxiFare(kmNum);
     </script>
   </body>
