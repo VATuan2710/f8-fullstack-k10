@@ -1,12 +1,16 @@
 let text =
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit magnam, praesentium excepturi voluptas fugit quasi porro itaque similique! Expedita pariatur eaque tempore impedit.";
 let words = text.split(" ");
-let wrappedText = "";
+// let wrappedText = "";
 
-for (let i = 0; i < words.length; i++) {
-  wrappedText += `<span> ${words[i]}</span>`;
-}
-document.write(wrappedText);
+// for (let i = 0; i < words.length; i++) {
+//   wrappedText += `<span> ${words[i]}</span>`;
+// }
+
+words = `<span>${text}</span>`;
+words = words.replaceAll(" ", "</span> <span>");
+
+document.write(words);
 
 let spans = document.querySelectorAll("span");
 
@@ -18,11 +22,8 @@ function highlightWord() {
   if (i < spans.length) {
     spans[i].classList.add("highlight");
     i++;
-    setTimeout(highlightWord, 200);
   } else {
     i = 0;
-    setTimeout(highlightWord, 200);
   }
 }
-
-highlightWord();
+setInterval(highlightWord, 500);
