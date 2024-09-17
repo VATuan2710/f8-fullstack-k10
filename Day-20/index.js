@@ -2,11 +2,9 @@ let text =
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit magnam, praesentium excepturi voluptas fugit quasi porro itaque similique! Expedita pariatur eaque tempore impedit.";
 let words = text.split(" ");
 // let wrappedText = "";
-
 // for (let i = 0; i < words.length; i++) {
 //   wrappedText += `<span> ${words[i]}</span>`;
 // }
-
 words = `<span>${text}</span>`;
 words = words.replaceAll(" ", "</span> <span>");
 
