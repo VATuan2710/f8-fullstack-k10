@@ -19,8 +19,8 @@ function login(email, password) {
   return "Tai khoan khong ton tai!";
 }
 
-console.log(register("hoang", "12345", "hoangnm@gmail.com"));
-console.log(register("an", "00000", "hoangan@gmail.com"));
+register("tuan", "12345", "tuanva@gmail.com");
+register("vu", "00000", "tuanvu@gmail.com");
 
-const dataLogin = login("hoangan@gmail.com", "00000");
+const dataLogin = login("tuanva@gmail.com", "12345");
 console.log(dataLogin);

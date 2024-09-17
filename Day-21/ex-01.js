@@ -1,9 +1,11 @@
 function createCustomers(customers) {
+  // tạo shortName
   for (let i = 0; i < customers.length; i++) {
     let nameParts = customers[i].name.split(" ");
     customers[i].shortName =
-      nameParts[0] + " " + nameParts[nameParts.length - 1].charAt(0);
+      nameParts[0] + " " + nameParts[nameParts.length - 1];
   }
+  // bubble sort
   for (let i = 0; i < customers.length - 1; i++) {
     for (let j = 0; j < customers.length - i - 1; j++) {
       if (customers[j].age > customers[j + 1].age) {
@@ -13,7 +15,6 @@ function createCustomers(customers) {
       }
     }
   }
-
   return customers;
 }
 
