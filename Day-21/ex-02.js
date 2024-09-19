@@ -2,8 +2,7 @@ const users = [];
 
 function register(name, password, email) {
   if (!name || !password || !email) {
-    console.error("Thiếu thông tin. Vui lòng nhập đầy đủ");
-    return;
+    return "Thiếu thông tin. Vui lòng nhập đầy đủ";
   }
   const newUser = { name, password, email, role: "user" };
   users.push(newUser);

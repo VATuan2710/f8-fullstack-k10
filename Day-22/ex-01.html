@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Bai 1</h1>
+    <script>
+      function reverseArray(arr) {
+        let reversedArr = [];
+        while (arr.length > 0) {
+          reversedArr.push(arr.pop());
+        }
+        return reversedArr;
+      }
+
+      const numbers = [1, 2, 3, 4, 5];
+      const reversedNumbers = reverseArray(numbers);
+      console.log(reversedNumbers);
+    </script>
+  </body>
+</html>
