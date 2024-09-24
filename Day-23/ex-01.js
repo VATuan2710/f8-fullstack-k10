@@ -7,8 +7,9 @@ const products = [
 ];
 
 function searchProducts(searchTerm) {
+  const trimmedTerm = searchTerm.trim();
   const result = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    product.name.toLowerCase().includes(trimmedTerm.toLowerCase())
   );
   if (result.length > 0) {
     result.forEach((product) => console.log(product));
