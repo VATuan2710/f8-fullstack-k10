@@ -16,29 +16,25 @@ const students = [
   { id: 15, name: "Nhung", age: 18 },
   { id: 16, name: "Nguyễn Nhung", age: 18 },
 ];
-const splitName = (fullName) => {
-  const parts = fullName.split(" ");
-  const lastName = parts[0];
-  const middleName = parts.length > 2 ? parts.slice(1, -1).join(" ") : "";
-  const firstName = parts[parts.length - 1];
-  return { firstName, middleName, lastName };
-};
 
-const compareStudents = (a, b) => {
-  const nameA = splitName(a.name);
-  const nameB = splitName(b.name);
+const sortByName = (a, b) => {
+  const getLastName = (fullName) => fullName.split(" ").pop();
+  const getMiddleAndFirstName = (fullName) =>
+    fullName.split(" ").slice(0, -1).join(" ");
 
-  if (nameA.firstName !== nameB.firstName) {
-    return nameA.firstName.localeCompare(nameB.firstName);
+  const lastNameA = getLastName(a.name);
+  const lastNameB = getLastName(b.name);
+
+  if (lastNameA.localeCompare(lastNameB) === 0) {
+    const middleAndFirstNameA = getMiddleAndFirstName(a.name);
+    const middleAndFirstNameB = getMiddleAndFirstName(b.name);
+    return middleAndFirstNameA.localeCompare(middleAndFirstNameB);
   }
-  if (nameA.middleName !== nameB.middleName) {
-    return nameA.middleName.localeCompare(nameB.middleName);
-  }
-  return nameA.lastName.localeCompare(nameB.lastName);
+  return lastNameA.localeCompare(lastNameB);
 };
 
 const getProcessedStudents = () => {
-  return students.sort(compareStudents).map((student) => {
+  return students.sort(sortByName).map((student) => {
     return {
       ...student,
       name: student.name.toUpperCase(),
@@ -54,9 +50,9 @@ processedStudents.forEach((student) => {
   const studentDiv = document.createElement("div");
 
   studentDiv.innerHTML = `
-    ID: ${student.id} 
-    Name: ${student.name} 
-    Age: <span class="${student.isUnderage ? "underage" : ""}">
+    id: ${student.id} 
+    name: ${student.name} 
+    age: <span class="${student.isUnderage ? "underage" : ""}">
       ${student.age}
     </span>
     <br><br>
