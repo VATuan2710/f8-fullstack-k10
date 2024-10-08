@@ -28,7 +28,7 @@ function renderOrder(cart) {
     const nameCell = document.createElement("td");
     nameCell.textContent = item.name;
     if (item.hotSale) {
-      nameCell.classList.add("hot-sale");
+      nameCell.style.color = "red";
     }
 
     const priceCell = document.createElement("td");

@@ -34,6 +34,11 @@ function renderMenu(menuTree, parentElement) {
     a.href = "#";
     a.textContent = item.name;
 
+    if (item.parentId === 0) {
+      a.style.fontSize = "24px";
+    } else {
+      a.style.fontSize = "20px";
+    }
     li.appendChild(a);
 
     if (item.children.length > 0) {
