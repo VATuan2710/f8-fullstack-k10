@@ -26,29 +26,28 @@ function createMenu(menuData) {
   return menuTree;
 }
 
-function renderMenu(menuTree, parentElement) {
+function renderMenu(menuTree) {
+  let menuHtml = "";
   menuTree.forEach((item) => {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = "#";
-    a.textContent = item.name;
-
-    if (item.parentId === 0) {
-      a.style.fontSize = "24px";
-    } else {
-      a.style.fontSize = "20px";
-    }
-    li.appendChild(a);
-
+    menuHtml += `<li><a href="#" style="font-size: 24px">${item.name}</a>`;
     if (item.children.length > 0) {
-      const ul = document.createElement("ul");
-      renderMenu(item.children, ul);
-      li.appendChild(ul);
+      menuHtml += "<ul>";
+      item.children.forEach((child) => {
+        menuHtml += `<li><a href="#" style="font-size: 20px">${child.name}</a>`;
+        if (child.children.length > 0) {
+          menuHtml += "<ul>";
+          menuHtml += renderMenu(child.children);
+          menuHtml += "</ul>";
+        }
+        menuHtml += `</li>`;
+      });
+      menuHtml += "</ul>";
     }
-    parentElement.appendChild(li);
+    menuHtml += "</li>";
   });
+  return menuHtml;
 }
 
 const menuTree = createMenu(menu);
 const mainMenu = document.getElementById("main-menu");
-renderMenu(menuTree, mainMenu);
+mainMenu.innerHTML = renderMenu(menuTree);

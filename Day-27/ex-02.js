@@ -7,66 +7,46 @@ const cart = [
 ];
 
 function renderOrder(cart) {
-  const table = document.createElement("table");
-  const thead = document.createElement("thead");
-  const headerRow = document.createElement("tr");
-  const headers = ["Tên sản phẩm", "Đơn giá", "Số lượng", "Thành tiền"];
-  headers.forEach((headerText) => {
-    const th = document.createElement("th");
-    th.textContent = headerText;
-    headerRow.appendChild(th);
-  });
-  thead.appendChild(headerRow);
-  table.appendChild(thead);
+  let tableHtml = `
+    <table>
+      <thead>
+        <tr>
+          <th>Tên sản phẩm</th>
+          <th>Đơn giá</th>
+          <th>Số lượng</th>
+          <th>Thành tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
 
-  const tbody = document.createElement("tbody");
   let totalAmount = 0;
 
-  cart.forEach((item) => {
-    const row = document.createElement("tr");
-
-    const nameCell = document.createElement("td");
-    nameCell.textContent = item.name;
-    if (item.hotSale) {
-      nameCell.style.color = "red";
-    }
-
-    const priceCell = document.createElement("td");
-    priceCell.textContent = item.price;
-
-    const quantityCell = document.createElement("td");
-    quantityCell.textContent = item.quantity;
-
-    const totalCell = document.createElement("td");
+  cart.map((item) => {
     const total = item.price * item.quantity;
-    totalCell.textContent = total;
     totalAmount += total;
 
-    row.appendChild(nameCell);
-    row.appendChild(priceCell);
-    row.appendChild(quantityCell);
-    row.appendChild(totalCell);
-
-    tbody.appendChild(row);
+    tableHtml += `
+      <tr>
+        <td style="color: ${item.hotSale ? "red" : "black"}">${item.name}</td>
+        <td>${item.price}</td>
+        <td>${item.quantity}</td>
+        <td>${total}</td>
+      </tr>
+    `;
   });
 
-  table.appendChild(tbody);
+  tableHtml += `
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Tổng tiền</td>
+          <td>${totalAmount}</td>
+        </tr>
+      </tfoot>
+    </table>
+  `;
 
-  const tfoot = document.createElement("tfoot");
-  const footerRow = document.createElement("tr");
-  const footerCell = document.createElement("td");
-  footerCell.colSpan = 3;
-  footerCell.textContent = "Tổng tiền";
-  footerRow.appendChild(footerCell);
-
-  const totalCell = document.createElement("td");
-  totalCell.textContent = totalAmount;
-  footerRow.appendChild(totalCell);
-
-  tfoot.appendChild(footerRow);
-  table.appendChild(tfoot);
-
-  document.body.appendChild(table);
+  document.getElementById("cart-container").innerHTML = tableHtml;
 }
-
 renderOrder(cart);
