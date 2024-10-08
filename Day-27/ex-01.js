@@ -23,7 +23,6 @@ function createMenu(menuData) {
       menuMap[item.parentId].children.push(menuMap[item.id]);
     }
   });
-
   return menuTree;
 }
 
