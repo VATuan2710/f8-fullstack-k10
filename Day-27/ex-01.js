@@ -5,8 +5,8 @@ const menu = [
   { id: 4, name: "Products", parentId: 0 },
   { id: 5, name: "Contact", parentId: 0 },
   { id: 6, name: "T-Shirt", parentId: 4 },
-  { id: 7, name: "Jean", parentId: 4 },
-  { id: 8, name: "Skirt", parentId: 4 },
+  { id: 7, name: "Jean", parentId: 6 },
+  { id: 8, name: "Skirt", parentId: 7 },
 ];
 
 function createMenu(menuData) {
@@ -29,7 +29,13 @@ function createMenu(menuData) {
 function renderMenu(menuTree) {
   let menuHtml = "";
   menuTree.forEach((item) => {
-    menuHtml += `<li><a href="#" style="font-size: 24px">${item.name}</a>`;
+    let fontSize;
+    if (item.parentId === 0) {
+      fontSize = "24px";
+    } else {
+      fontSize = "20px";
+    }
+    menuHtml += `<li><a href="#" style="font-size: ${fontSize}">${item.name}</a>`;
     if (item.children.length > 0) {
       menuHtml += "<ul>";
       item.children.forEach((child) => {
