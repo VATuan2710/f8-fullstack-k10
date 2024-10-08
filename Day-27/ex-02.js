@@ -21,11 +21,9 @@ function renderOrder(cart) {
   `;
 
   let totalAmount = 0;
-
   cart.map((item) => {
     const total = item.price * item.quantity;
     totalAmount += total;
-
     tableHtml += `
       <tr>
         <td style="color: ${item.hotSale ? "red" : "black"}">${item.name}</td>
@@ -46,7 +44,6 @@ function renderOrder(cart) {
       </tfoot>
     </table>
   `;
-
   document.getElementById("cart-container").innerHTML = tableHtml;
 }
 renderOrder(cart);
