@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .completed {
+        background-color: green;
+        color: white;
+      }
+      .doing {
+        background-color: red;
+        color: white;
+      }
+      table {
+        border: 1px solid gray;
+      }
+      th,
+      td {
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="prioritySort">Priority sort</button>
+    <button id="completed">Completed</button>
+    <button id="doing">Doing</button>
+    <button id="reset">Reset</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Priority</th>
+          <th>Completed</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="todos"></tbody>
+    </table>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
