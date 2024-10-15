@@ -47,6 +47,7 @@ let count = 0;
 let slideLength = dataSlide.length;
 const leftBtn = document.getElementsByClassName("left-arrow")[0];
 const rightBtn = document.getElementsByClassName("right-arrow")[0];
+let slideInterval;
 
 function renderSlides() {
   const carouselInner = document.getElementById("carousel-inner");
@@ -89,24 +90,30 @@ renderSlide();
 function setSlideByDot(index) {
   count = index;
   dots[index].style.background = "orange";
+  clearInterval(slideInterval);
+  autoNext();
   return renderSlide();
 }
 
 function goLeft() {
+  clearInterval(slideInterval);
   if (count === 0) {
     count = slideLength - 1;
   } else {
     count--;
   }
+  autoNext();
   return renderSlide();
 }
 
 function goRight() {
+  clearInterval(slideInterval);
   if (count === slideLength - 1) {
     count = 0;
   } else {
     count++;
   }
+  autoNext();
   return renderSlide();
 }
 

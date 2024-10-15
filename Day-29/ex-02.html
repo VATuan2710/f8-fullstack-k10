@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="ex-02.css" />
   </head>
   <body>
     <form action="" method="post" id="register">
       <div class="form-group">
-        <label for="fullname">Họ tên</label>
+        <label for="fullname">Họ và tên</label>
         <input type="text" name="fullname" id="fullname" />
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
+        <input type="text" name="email" id="email" />
+        <span class="error" id="emailError"></span>
       </div>
       <div class="form-group">
         <label for="password">Mật khẩu</label>
