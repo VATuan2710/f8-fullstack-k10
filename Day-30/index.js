@@ -88,8 +88,6 @@ function addTodo(event) {
     return;
   }
 
-  const existTodo = todos.find((todo) => todo.title === titleEle.value.trim());
-
   if (idEditing) {
     todos = todos.map((todo) => {
       if (todo.id === idEditing) {
@@ -104,8 +102,6 @@ function addTodo(event) {
     });
     idEditing = null;
     btnSubmit.textContent = "Add";
-  } else if (existTodo) {
-    existTodo.description = descriptionEle.value;
   } else {
     todos.push({
       id: generateRandomID(4),
