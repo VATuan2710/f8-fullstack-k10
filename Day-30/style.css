@@ -1,0 +1,54 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+form {
+	width: 90%;
+	max-width: 100%;
+	margin: 24px auto;
+	padding: 24px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: center;
+	width: 90%;
+	margin: 24px auto;
+}
+
+td,
+th {
+	border: 1px solid #ccc;
+}
+
+.button-group {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	min-width: 100px;
+	margin: 6px;
+}
+
+.completed, .pending {
+	color: white;
+	padding: 6px;
+	border-radius: 4px;
+	border: none;
+}
+.completed {
+	background-color: #4CAF50;
+}
+
+.pending {
+	background-color: #f44336;
+}
+
+.text-danger {
+	color: #f44336;
+}
