@@ -8,7 +8,9 @@ const titleError = document.getElementById("titleError");
 const descriptionError = document.getElementById("descriptionError");
 
 let todos = [];
-
+let todoEditing = {
+  id: null,
+};
 function generateNewId() {
   if (todos.length === 0) {
     return 1;
@@ -17,8 +19,12 @@ function generateNewId() {
   return maxId + 1;
 }
 
+// có thể thay url cho http
+
+const url = "http://localhost:3000/todos";
+
 function getTodos() {
-  fetch("http://localhost:3000/todos")
+  fetch(url)
     .then((response) => response.json())
     .then((data) => {
       todos = data;
@@ -28,7 +34,7 @@ function getTodos() {
       console.log(err);
     });
 }
-
+// getTodos();
 function renderTodo(datas) {
   todoList.innerHTML = "";
   if (datas.length) {
@@ -48,6 +54,9 @@ function renderTodo(datas) {
         <button onclick="removeTodo(${
           item.id
         })" class="btn btn-danger">Remove</button>
+        <button onclick="updateTodo('${
+          item.id
+        }')" class="btn btn-warning">Update</button>
       </td>
       `;
       todoList.appendChild(trEle);
@@ -57,45 +66,76 @@ function renderTodo(datas) {
   }
 }
 
-function addTodo(event) {
+function handleTodo(event) {
   event.preventDefault();
   if (!validTodo()) return;
+  if (todoEditing.id) {
+    const todo = {
+      title: titleEle.value,
+      description: descriptionEle.value,
+      status: todoEditing.status,
+    };
+    fetch(`${url}/${todoEditing.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todo),
+    }).then(() => {
+      todos = todos.map((item) => {
+        if (item.id === todoEditing.id) {
+          return todoEditing;
+        }
+      });
+      renderTodos(todos);
+    });
+  } else {
+    // const newId = generateNewId();
+    const newTodo = {
+      // id: newId,
+      title: titleEle.value,
+      description: descriptionEle.value,
+      status: false,
+    };
 
-  const newId = generateNewId();
-  const newTodo = {
-    id: newId,
-    title: titleEle.value,
-    description: descriptionEle.value,
-    status: false,
-  };
-
-  fetch("http://localhost:3000/todos", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(newTodo),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      todos.push(data);
-      filterTodos();
-      resetForm();
+    fetch("http://localhost:3000/todos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newTodo),
     })
-    .catch((error) => console.error(error));
+      .then((response) => response.json())
+      .then((data) => {
+        // todos.push(data);
+        // filterTodos();
+        // resetForm();
+        console.log(`thành công`, data);
+      })
+      .catch((error) => console.error(error));
+  }
 }
 
 function removeTodo(id) {
-  fetch(`http://localhost:3000/todos/${id}`, {
-    method: "DELETE",
-  })
-    .then(() => {
-      todos = todos.filter((todo) => todo.id !== id);
-      filterTodos();
+  confirm("Sure ?") &&
+    fetch(`${url}/${id}`, {
+      method: "DELETE",
     })
-    .catch((error) => console.error("Error:", error));
+      .then(() => {
+        console.log(id);
+        todos = todos.filter((todo) => todo.id !== id);
+        filterTodos();
+      })
+      .catch((error) => console.error("Error:", error));
 }
 
+function updateTodo(id) {
+  todoEditing = todos.find((todo) => todo.id === id);
+  titleEle.value = todoEditing.title;
+  descriptionEle.value = todoEditing.description;
+  // idEditing = id;
+  btnSubmit.textContent = "Update";
+}
 function validTodo() {
   let isValid = true;
 
@@ -138,6 +178,5 @@ function filterTodos() {
   renderTodo(filteredTodos);
 }
 
-getTodos();
-todoForm.addEventListener("submit", addTodo);
+todoForm.addEventListener("submit", handleTodo);
 btnReset.addEventListener("click", resetForm);

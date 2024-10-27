@@ -74,9 +74,11 @@ function handleTodo(event) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedTodo),
     }).then(() => {
-      todos = todos.map((item) =>
-        item.id === todoEditing.id ? { ...item, ...updatedTodo } : item
-      );
+      todos = todos.map((item) => {
+        if (item.id === todoEditing.id) {
+          return todoEditing;
+        }
+      });
       filterTodos();
       resetForm();
     });

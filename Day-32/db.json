@@ -27,13 +27,6 @@
       "description": "Description 4",
       "priority": "medium",
       "status": false
-    },
-    {
-      "id": "5",
-      "title": "ád",
-      "description": "fsa",
-      "status": false,
-      "priority": "medium"
     }
   ]
 }
