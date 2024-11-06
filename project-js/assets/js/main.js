@@ -5,7 +5,9 @@ import "./search.js";
 const { products } = await getAll("products");
 console.log(products);
 
-const hotSaleProducts = products.filter((product) => product.rating > 4);
+const hotSaleProducts = products.filter(
+  (product) => product.minimumOrderQuantity > 40
+);
 const onSaleProducts = products.filter(
   (product) => product.discountPercentage > 10
 );
