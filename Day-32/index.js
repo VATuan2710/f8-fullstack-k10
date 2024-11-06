@@ -17,13 +17,10 @@ const url = "http://localhost:3000/todos";
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
-    data.map((todo) => {
-      todos.push(todo);
-    });
-    console.log(todos);
+    todos = data;
     filterTodos();
   })
-  .catch((error) => console.log(error));
+  .catch((error) => console.error(error));
 
 function renderTodo(datas) {
   todoList.innerHTML = "";
@@ -54,7 +51,7 @@ function renderTodo(datas) {
       todoList.appendChild(trEle);
     });
   } else {
-    todoList.innerHTML = "<tr><td colspan='5'>No data</td></tr>";
+    todoList.innerHTML = "<tr><td colspan='6'>No data</td></tr>";
   }
 }
 
@@ -62,92 +59,105 @@ function handleTodo(event) {
   event.preventDefault();
   if (!validTodo()) return;
 
+  const todoData = {
+    title: titleEle.value,
+    description: descriptionEle.value,
+    priority: priorityEle.value,
+    status: todoEditing.id ? todoEditing.status : false,
+  };
+
   if (todoEditing.id) {
-    const updatedTodo = {
-      title: titleEle.value,
-      description: descriptionEle.value,
-      status: todoEditing.status,
-      priority: priorityEle.value,
-    };
+    // cập nhật
     fetch(`${url}/${todoEditing.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updatedTodo),
-    }).then(() => {
-      todos = todos.map((item) => {
-        if (item.id === todoEditing.id) {
-          return todoEditing;
-        }
-      });
-      filterTodos();
-      resetForm();
-    });
-  } else {
-    const newTodo = {
-      id: generateNewId().toString(),
-      title: titleEle.value,
-      description: descriptionEle.value,
-      status: false,
-      priority: priorityEle.value,
-    };
-
-    fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newTodo),
+      body: JSON.stringify(todoData),
     })
       .then((response) => response.json())
-      .then((data) => {
-        todos.push(data);
+      .then(() => {
+        todos = todos.map((todo) =>
+          todo.id === todoEditing.id ? { ...todo, ...todoData } : todo
+        );
         filterTodos();
         resetForm();
+      })
+      .catch((error) => console.error(error));
+  } else {
+    const existingTodo = todos.find(
+      (todo) => todo.title.toLowerCase() === todoData.title.toLowerCase()
+    );
+    if (existingTodo) {
+      // cập nhật nếu trùng title
+      fetch(`${url}/${existingTodo.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(todoData),
+      })
+        .then((response) => response.json())
+        .then(() => {
+          todos = todos.map((todo) =>
+            todo.id === existingTodo.id ? { ...todo, ...todoData } : todo
+          );
+          filterTodos();
+          resetForm();
+        })
+        .catch((error) => console.error(error));
+    } else {
+      //  thêm mới
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...todoData, id: generateNewId().toString() }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          todos.push(data);
+          filterTodos();
+          resetForm();
+        })
+        .catch((error) => console.error(error));
+    }
+  }
+}
+
+function generateNewId() {
+  if (todos.length === 0) {
+    return 1;
+  } else {
+    return Math.max(...todos.map((todo) => parseInt(todo.id))) + 1;
+  }
+}
+
+function toggleStatus(id) {
+  const todo = todos.find((item) => parseInt(item.id) === id);
+  if (todo) {
+    const updatedStatus = !todo.status;
+    fetch(`${url}/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status: updatedStatus }),
+    })
+      .then(() => {
+        todo.status = updatedStatus;
+        filterTodos();
       })
       .catch((error) => console.error(error));
   }
 }
 
-function generateNewId() {
-  return todos.length === 0 ? 1 : Math.max(...todos.map((todo) => todo.id)) + 1;
-}
-
-function toggleStatus(id) {
-  const todo = todos.find((item) => parseInt(item.id) === id);
-  console.log(typeof id);
-  if (todo) {
-    const updatedStatus = !todo.status;
-    fetch(`http://localhost:3000/todos/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ status: updatedStatus }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`${response.status}`);
-        }
-        return response.json();
-      })
-      .then(() => {
-        todos = todos.map((item) =>
-          item.id === id ? { ...item, status: updatedStatus } : item
-        );
-        renderTodo(todos);
-      })
-      .catch((error) => console.error(error.message));
-  } else {
-    console.error(id, todos);
-  }
-}
-
 function removeTodo(id) {
   if (confirm("Sure?")) {
-    fetch(`${url}/${id}`, {
-      method: "DELETE",
-    })
-      .then(() => {
-        todos = todos.filter((todo) => todo.id !== id);
-        filterTodos();
+    fetch(`${url}/${id}`, { method: "DELETE" })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to delete todo");
+        }
+        return fetch(url);
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        todos = data;
+        renderTodo(todos);
       })
       .catch((error) => console.error(error));
   }
@@ -155,13 +165,12 @@ function removeTodo(id) {
 
 function updateTodo(id) {
   todoEditing = todos.find((todo) => todo.id === id);
-  if (!todoEditing) {
-    return;
+  if (todoEditing) {
+    titleEle.value = todoEditing.title;
+    descriptionEle.value = todoEditing.description;
+    priorityEle.value = todoEditing.priority;
+    btnSubmit.textContent = "Update";
   }
-  titleEle.value = todoEditing.title;
-  descriptionEle.value = todoEditing.description;
-  priorityEle.value = todoEditing.priority;
-  btnSubmit.textContent = "Update";
 }
 
 function validTodo() {
@@ -187,6 +196,7 @@ function validTodo() {
 function resetForm() {
   titleEle.value = "";
   descriptionEle.value = "";
+  priorityEle.value = "low";
   titleError.textContent = "";
   descriptionError.textContent = "";
   todoEditing = { id: null };
