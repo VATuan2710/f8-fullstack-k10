@@ -15,7 +15,7 @@ function renderSearchResults() {
     const productElement = document.createElement("div");
     productElement.classList.add("search-result-item");
     productElement.innerHTML = `
-      <a href="/product-detail.html?id=${product.id}">
+      <a href="../project-js/product-detail.html?id=${product.id}">
         <img src="${product.thumbnail}" alt="${product.title}" style="width: 50px; height: auto; margin-right: 10px;">
         ${product.title}
       </a>

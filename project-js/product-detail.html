@@ -10,10 +10,68 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../project-js/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../project-js/assets/css/responsive.css" />
+    <link rel="stylesheet" href="../project-js/assets/css/detail.css" />
   </head>
-  <body>
-    <h1>Chi tiết sản phẩm</h1>
 
+  <body>
+    <header>
+      <input type="checkbox" id="bar-check" hidden />
+      <label for="bar-check" class="overlay"></label>
+      <nav class="navbar">
+        <div class="container">
+          <div class="logo">
+            <a href="./index.html">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg"
+                alt="Logo"
+                style="width: 150px; height: auto"
+              />
+            </a>
+          </div>
+          <div class="content">
+            <ul>
+              <li>
+                <a href="../project-js/category.html?category=smartphones">
+                  Smart Phones
+                </a>
+              </li>
+              <li>
+                <a href="../project-js/category.html?category=laptops">
+                  Laptops
+                </a>
+              </li>
+              <li>
+                <a href="../project-js/category.html?category=furniture">
+                  Furniture
+                </a>
+              </li>
+              <li>
+                <a href="../project-js/category.html?category=groceries">
+                  Groceries
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="search-list-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" id="search" />
+            <a href="#" class="bag"><i class="fa-solid fa-bag-shopping"></i></a>
+            <div id="search-results" class="search-results-container"></div>
+          </div>
+          <label class="bar" for="bar-check">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <h1>Chi tiết sản phẩm</h1>
     <div class="container">
       <div id="detail"></div>
     </div>

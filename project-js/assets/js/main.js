@@ -8,22 +8,38 @@ console.log(products);
 const hotSaleProducts = products.filter(
   (product) => product.minimumOrderQuantity > 40
 );
-const onSaleProducts = products.filter(
+const flashSaleProducts = products.filter(
   (product) => product.discountPercentage > 10
 );
-const newArrivalsProducts = products.slice(0, 5);
 
 const hotSaleSection = document.getElementById("hot-sale");
-const onSaleSection = document.getElementById("on-sale");
-const newArrivalsSection = document.getElementById("new-arrivals");
+const flashSaleSection = document.getElementById("flash-sale");
 
 render(hotSaleSection, hotSaleProducts);
-render(onSaleSection, onSaleProducts);
-render(newArrivalsSection, newArrivalsProducts);
+render(flashSaleSection, flashSaleProducts);
 
 const productId = getParams("id");
-
 const product = await getById("products", productId);
 
-// Cách 2: Lấy toàn bộ sản phẩm về -> products. Khi cần sản phẩm chi tiết thì sử dụng products.find()
 console.log(product);
+
+function countdownTimer(duration) {
+  let seconds = duration;
+  const hoursElement = document.getElementById("hours");
+  const minutesElement = document.getElementById("minutes");
+  const secondsElement = document.getElementById("seconds");
+  const interval = setInterval(() => {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    hoursElement.innerHTML = String(hrs).padStart(2, "0");
+    minutesElement.innerHTML = String(mins).padStart(2, "0");
+    secondsElement.innerHTML = String(secs).padStart(2, "0");
+    if (seconds <= 0) {
+      clearInterval(interval);
+    }
+    seconds--;
+  }, 1000);
+}
+
+countdownTimer(3600);

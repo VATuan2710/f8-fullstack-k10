@@ -9,12 +9,12 @@ export function render(target, datas) {
     const productElement = document.createElement("div");
     productElement.innerHTML = /*html*/ `
         <div class="product-card">
-          <a href='/product-detail.html?id=${item.id}'><img src="${item.thumbnail}" alt="${item.title}" /></a>
-          <div class="product-infor">
+          <a href='../project-js/product-detail.html?id=${item.id}'><img src="${item.thumbnail}" alt="${item.title}" loading="lazy"/></a>
+          <div class="product-info">
             <h2>${item.title}</h2>
             <div class="price">Giá: ${item.price}</div>
             <p>Mô tả: ${item.description}</p>
-            <button  class="btn btn-danger"> <a href='/product-detail.html?id=${item.id}'>Xem chi tiết</a></button>
+            <button  class="btn btn-danger"> <a href='../project-js/product-detail.html?id=${item.id}'>Xem chi tiết</a></button>
           </div>
         </div>
     `;

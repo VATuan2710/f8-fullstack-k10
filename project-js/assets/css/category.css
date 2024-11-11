@@ -1,0 +1,23 @@
+#category-head {
+  margin-bottom: 50px;
+}
+
+#category {
+  display: flex;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(171, 169, 169, 0.098);
+  border-radius: 20px;
+}
+
+.product-container a {
+  margin: 0 auto;
+}
+
+.product-info {
+  background-color: rgba(171, 169, 169, 0.158);
+}

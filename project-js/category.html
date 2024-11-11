@@ -15,9 +15,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../project-js/assets/css/main.css" />
+    <link rel="stylesheet" href="../project-js/assets/css/category.css" />
+    <link rel="stylesheet" href="../project-js/assets/css/responsive.css" />
   </head>
   <body>
     <header>
+      <input type="checkbox" id="bar-check" hidden />
+      <label for="bar-check" class="overlay"></label>
       <nav class="navbar">
         <div class="container">
           <div class="logo">
@@ -25,7 +29,7 @@
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg"
                 alt="Logo"
-                style="width: 182px; height: auto"
+                style="width: 150px; height: auto"
               />
             </a>
           </div>
@@ -53,18 +57,33 @@
               </li>
             </ul>
           </div>
+
           <div class="search-list-btn">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Search" id="search" />
             <a href="#" class="bag"><i class="fa-solid fa-bag-shopping"></i></a>
             <div id="search-results" class="search-results-container"></div>
           </div>
+          <label class="bar" for="bar-check">
+            <i class="fa-solid fa-bars"></i>
+          </label>
         </div>
       </nav>
     </header>
 
-    <div class="container">
+    <div class="container" id="category-head">
       <h1 id="title"></h1>
+      <div class="filter-sort-section">
+        <div class="sort">
+          <label for="sort-select">Sắp xếp theo:</label>
+          <select id="sort-select">
+            <option value="name-az">Tên từ A - Z</option>
+            <option value="name-za">Tên từ Z - A</option>
+            <option value="price-up">Giá từ thấp đến cao</option>
+            <option value="price-down">Giá từ cao đến thấp</option>
+          </select>
+        </div>
+      </div>
     </div>
     <section class="container" id="category"></section>
 
