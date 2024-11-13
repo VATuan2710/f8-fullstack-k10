@@ -7,12 +7,15 @@ h1 {
   text-align: center;
 }
 
+/*Detail content */
+
 .detail-content {
   font-size: 1.2rem;
 }
 
 #detail {
   padding-top: 10px;
+  margin-bottom: 10px;
 }
 .detail-price {
   display: flex;
@@ -22,12 +25,6 @@ h1 {
   margin-left: 10px;
   text-decoration: line-through;
   color: rgba(128, 128, 128, 0.902);
-}
-.image {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(240, 248, 255, 0.479);
-  border-radius: 10px;
 }
 
 .detail-rating {
@@ -84,4 +81,52 @@ h1 {
 
 .form-control {
   border-radius: 0;
+}
+
+/*Detail image */
+.image {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(240, 248, 255, 0.479);
+  border-radius: 10px;
+}
+
+.thumbnail-gallery img {
+  border: 1px solid #ddd;
+  /* margin-right: 5px; */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Detail comment */
+
+.reviews-section {
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+}
+
+.review-rating {
+  color: #ffc107;
+}
+
+.review-header {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-comment {
+  margin-top: 5px;
+  font-size: 0.9rem;
 }

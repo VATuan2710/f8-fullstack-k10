@@ -41,7 +41,7 @@ function renderSlides() {
     const slideDiv = document.createElement("div");
     slideDiv.classList.add("slide");
     slideDiv.innerHTML = `
-      <img src="${slide.image}" alt="${slide.title}" />
+      <a href=""><img src="${slide.image}" alt="${slide.title}" /></a>
     `;
     carouselInner.appendChild(slideDiv);
 

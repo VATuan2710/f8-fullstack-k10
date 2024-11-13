@@ -33,9 +33,20 @@ function renderDetail(target, data) {
   productItem.innerHTML = /*html*/ `
     <div class="col col-md-5">
         <div class="image">
-          <img src="${data.thumbnail}" alt="${
+          <img id="main-image" src="${
+            data.images[0]
+          }" style="width: 300px; height: auto alt="${
     data.title
   }" loading="lazy" class="img-fluid"/>
+        </div>
+         <div class="thumbnail-gallery  d-flex">
+          ${data.images
+            .map(
+              (img, index) => `
+            <img src="${img}" alt="${data.title} thumbnail ${index}" class="thumbnail img-thumbnail" style="width: 80px; height: 80px; cursor: pointer;" />
+          `
+            )
+            .join("")}
         </div>
       </div>  
       <div class="col col-md-7">
@@ -55,10 +66,10 @@ function renderDetail(target, data) {
           
           <div class="quantity-selector d-flex align-items-center">
             <span>Chọn số lượng: </span>
-            <button class="btn btn-outline-secondary quantity-decrease"">-</button>
+            <button class="btn btn-outline-secondary quantity-decrease">-</button>
             <input min="1" max="${
               data.stock
-            }" value="1" class="form-control text-center quantity-input" ">
+            }" value="1" class="form-control text-center quantity-input">
             <button class="btn btn-outline-secondary quantity-increase">+</button>
           </div>
           
@@ -71,8 +82,8 @@ function renderDetail(target, data) {
   `;
 
   target.appendChild(productItem);
-
   setupQuantityButtons(productItem, data.stock);
+  setupImageGallery(productItem, data.images);
 }
 
 function setupQuantityButtons(container, maxStock) {
@@ -92,6 +103,17 @@ function setupQuantityButtons(container, maxStock) {
     if (currentValue < maxStock) {
       quantityInput.value = currentValue + 1;
     }
+  });
+}
+
+function setupImageGallery(container, images) {
+  const mainImage = container.querySelector("#main-image");
+  const thumbnails = container.querySelectorAll(".thumbnail");
+
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      mainImage.src = images[index];
+    });
   });
 }
 

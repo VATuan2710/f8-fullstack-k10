@@ -4,6 +4,9 @@ import { getParams } from "./utils.js";
 const categoryElement = document.getElementById("category");
 const title = document.getElementById("title");
 const sortSelect = document.getElementById("sort-select");
+const filterPriceBtn = document.getElementById("filter-price-btn");
+const minPriceInput = document.getElementById("min-price");
+const maxPriceInput = document.getElementById("max-price");
 const param = getParams("category");
 title.innerText = `Top ${param}:`.toUpperCase();
 
@@ -75,8 +78,26 @@ function handleSort() {
   } else {
     sortedProducts = products.slice();
   }
-
   renderProducts(sortedProducts);
 }
 
+function handlePriceFilter() {
+  const minPrice = parseFloat(minPriceInput.value);
+  const maxPrice = parseFloat(maxPriceInput.value);
+
+  const filteredProducts = products.filter((products) => {
+    if (!isNaN(minPrice) && !isNaN(maxPrice)) {
+      return products.price >= minPrice && products.price <= maxPrice;
+    } else if (!isNaN(minPrice)) {
+      return products.price >= minPrice;
+    } else if (!isNaN(maxPrice)) {
+      return products.price <= maxPrice;
+    } else {
+      return true;
+    }
+  });
+  renderProducts(filteredProducts);
+}
+
 sortSelect.addEventListener("change", handleSort);
+filterPriceBtn.addEventListener("click", handlePriceFilter);
