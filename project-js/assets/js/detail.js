@@ -45,7 +45,7 @@ function renderDetail(target, data) {
               (img, index) => `
             <img src="${img}" alt="${data.title} thumbnail ${index}" class="thumbnail img-thumbnail" style="width: 80px; height: 80px; cursor: pointer;" />
           `
-            )
+            ) 
             .join("")}
         </div>
       </div>  
